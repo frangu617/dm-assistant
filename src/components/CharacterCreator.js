@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Grid, FormControl, FormLabel, Checkbox, FormControlLabel } from '@mui/material';
+
 
 export default function CharacterCreator() {
 
@@ -40,12 +42,12 @@ export default function CharacterCreator() {
         alignment: '',
         background: '',
         abilities: {
-          strength: 10,
-          dexterity: 10,
-          constitution: 10,
-          intelligence: 10,
-          wisdom: 10,
-          charisma: 10,
+            strength: 10,
+            dexterity: 10,
+            constitution: 10,
+            intelligence: 10,
+            wisdom: 10,
+            charisma: 10,
         },
         skills: [],
         feats: [],
@@ -53,8 +55,8 @@ export default function CharacterCreator() {
         hitDice: '1d10',
         inventory: '',
         description: '',
-      });
-      
+    });
+
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}/api/characters`)
             .then((response) => {
@@ -69,12 +71,13 @@ export default function CharacterCreator() {
     }, []);
 
 
-    const handleCharacterSubmit =  (e) => {
+    const handleCharacterSubmit = (e) => {
         e.preventDefault();
 
         // Send a POST request to the server to create a character
-         fetch('/api/characters', {
+        fetch('/api/characters', {
             method: 'POST',
+            action: "/characters",
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -155,48 +158,59 @@ export default function CharacterCreator() {
 
                 {/* Abilities (Strength, Dexterity, etc.) */}
                 <h3>Abilities</h3>
-                {Object.keys(newCharacter.abilities).map((ability, index) => (
-                    <div key={index}>
-                        <label>{ability}: </label>
-                        <input
-                            type="number"
-                            value={newCharacter.abilities[ability]}
-                            onChange={(e) =>
-                                setNewCharacter({
-                                    ...newCharacter,
-                                    abilities: {
-                                        ...newCharacter.abilities,
-                                        [ability]: parseInt(e.target.value),
-                                    },
-                                })
-                            }
-                        />
-                    </div>
-                ))}
+                <Grid container spacing={2}>
+                    {Object.keys(newCharacter.abilities).map((ability, index) => (
+                        <Grid item xs={6} sm={4} lg={2} key={index}>
+                            <FormControl>
 
+                                <FormLabel>{ability}: </FormLabel>
+                                <input
+                                    type="number"
+                                    value={newCharacter.abilities[ability]}
+                                    onChange={(e) =>
+                                        setNewCharacter({
+                                            ...newCharacter,
+                                            abilities: {
+                                                ...newCharacter.abilities,
+                                                [ability]: parseInt(e.target.value),
+                                            },
+                                        })
+                                    }
+                                />
+                            </FormControl>
+                        </Grid>
+                    ))}
+                </Grid>
                 {/* Skills */}
                 <h3>Skills</h3>
-                {skillsList.map((skill, index) => (
-                    <div key={index}>
-                        <label>{skill}</label>
-                        <input
-                            type="checkbox"
-                            checked={newCharacter.skills.includes(skill)}
-                            onChange={(e) => {
-                                const skills = [...newCharacter.skills];
-                                if (e.target.checked) {
-                                    skills.push(skill);
-                                } else {
-                                    const index = skills.indexOf(skill);
-                                    if (index !== -1) {
-                                        skills.splice(index, 1);
-                                    }
+                <Grid container spacing={2}>
+                    {skillsList.map((skill, index) => (
+                        <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        checked={newCharacter.skills.includes(skill)}
+                                        onChange={(e) => {
+                                            const skills = [...newCharacter.skills];
+                                            if (e.target.checked) {
+                                                skills.push(skill);
+                                            } else {
+                                                const index = skills.indexOf(skill);
+                                                if (index !== -1) {
+                                                    skills.splice(index, 1);
+                                                }
+                                            }
+                                            setNewCharacter({ ...newCharacter, skills });
+                                        }}
+                                    />
                                 }
-                                setNewCharacter({ ...newCharacter, skills });
-                            }}
-                        />
-                    </div>
-                ))}
+                                label={skill}
+                            />
+                        </Grid>
+                    ))}
+                </Grid>
+
+
 
                 {/* Hit Points */}
                 <div>
@@ -237,7 +251,8 @@ export default function CharacterCreator() {
                 </div>
 
                 <button type="submit">Add Character</button>
-            </form>
-        </div>
+            </form >
+        </div >
 
-)}
+    )
+}

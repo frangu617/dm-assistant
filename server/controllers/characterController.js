@@ -3,14 +3,25 @@ const router = express.Router();
 const Character = require('../models/Character');
 
 // Create a new character
-router.post('/', async (req, res) => {
-    try {
-        const character = new Character(req.body);
-        await character.save();
-        res.status(201).json(character);
-    } catch (error) {
+router.post('/',  (req, res) => {
+    Character.db.create(req.body)
+    .then((data) => {        
+        res.status(201).json(data);
+    })
+    .catch((error) => {
         res.status(400).json({ error: 'Could not create character' });
-    }
+        console.log(error);
+
+    })
+
+
+    // try {
+    //     const character = new Character(req.body);
+    //     await character.save();
+    //     res.status(201).json(character);
+    // } catch (error) {
+    //     res.status(400).json({ error: 'Could not create character' });
+    // }
 });
 
 // Get a list of all characters
