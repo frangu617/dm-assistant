@@ -107,6 +107,7 @@ const DiceRoller = () => {
                                 <div>
                                     <label htmlFor="numberOfDiceToRoll">D4:</label>
                                     <input
+                                    style={{marginLeft:"10px"}}
                                         placeholder="Number of D4 to roll"
                                         type="number"
                                         value={numberOfD4DiceToRoll}
@@ -137,6 +138,7 @@ const DiceRoller = () => {
                                 <div>
                                     <label htmlFor="numberOfDiceToRoll">D6:</label>
                                     <input
+                                    style={{marginLeft:"10px"}}
                                         placeholder="Number of D6 to roll"
                                         type="number"
                                         value={numberOfD6DiceToRoll}
@@ -167,6 +169,7 @@ const DiceRoller = () => {
                                 <div>
                                     <label htmlFor="numberOfDiceToRoll">D8:</label>
                                     <input
+                                    style={{marginLeft:"10px"}}
                                         placeholder="Number of D8 to roll"
                                         type="number"
                                         value={numberOfD8DiceToRoll}
@@ -197,6 +200,7 @@ const DiceRoller = () => {
                                 <div>
                                     <label htmlFor="numberOfDiceToRoll">D10:</label>
                                     <input
+                                    style={{marginLeft:"10px"}}
                                         placeholder="Number of D6 to roll"
                                         type="number"
                                         value={numberOfD10DiceToRoll}
@@ -229,6 +233,7 @@ const DiceRoller = () => {
                                 <div>
                                     <label htmlFor="numberOfDiceToRoll">D12:</label>
                                     <input
+                                    style={{marginLeft:"10px"}}
                                         placeholder="Number of D12 to roll"
                                         type="number"
                                         value={numberOfD12DiceToRoll}
@@ -261,6 +266,7 @@ const DiceRoller = () => {
                                 <div>
                                     <label htmlFor="numberOfDiceToRoll">D20:</label>
                                     <input
+                                    style={{marginLeft:"10px"}}
                                         placeholder="Number of D6 to roll"
                                         type="number"
                                         value={numberOfD20DiceToRoll}
