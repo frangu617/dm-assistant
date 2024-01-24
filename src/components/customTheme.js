@@ -1,6 +1,5 @@
 import { createTheme } from '@mui/material/styles';
 
-// Define custom colors
 const customTheme = createTheme({
   palette: {
     primary: {
@@ -9,16 +8,38 @@ const customTheme = createTheme({
     secondary: {
       main: '#008080', // Teal color
     },
+    background: {
+      default: '#fdf5e6', // Papyrus-style background color
+      paper: '#fffaf0', // Paper elements color
+    },
   },
   typography: {
-    fontFamily: 'Georgia, serif', // You can change the font family
+    fontFamily: 'Georgia, serif',
   },
-  overrides: {
+  components: {
     MuiListItem: {
-      root: {
-        '&$selected': {
-          color: '#8B0000', // Change the color to your preferred highlight color
-          fontWeight: 'bold',
+      styleOverrides: {
+        root: {
+          '&.Mui-selected': {
+            color: '#8B0000',
+            fontWeight: 'bold',
+          },
+        },
+      },
+    },
+    MuiCheckbox: {
+      styleOverrides: {
+        root: {
+          color: '#000', // Border color
+          '&:not(.Mui-checked)': {
+            backgroundColor: '#fff', // Background color when unchecked
+            borderColor: '#000', // Border color
+          },
+          '&.Mui-checked': {
+            backgroundColor: '#8B0000', // Background color when checked
+            borderColor: '#000', // Keep border color consistent
+            color: '#fff', // Checkmark color
+          },
         },
       },
     },

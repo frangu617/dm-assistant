@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Grid, FormControl, FormLabel, Checkbox, FormControlLabel } from '@mui/material';
+import { Grid, Button, Checkbox, FormControlLabel, TextField, Card, CardContent } from '@mui/material';
 
 
 export default function CharacterCreator() {
@@ -74,14 +74,18 @@ export default function CharacterCreator() {
     const handleCharacterSubmit = (e) => {
         e.preventDefault();
 
+        const characterData = {
+            ...newCharacter,
+            inventory: newCharacter.inventory.split(",").map(item => item.trim()), // Convert inventory string to array
+        };
+
         // Send a POST request to the server to create a character
-        fetch('/api/characters', {
+        fetch(`${process.env.REACT_APP_API_URL}/api/characters`, {
             method: 'POST',
-            action: "/characters",
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(newCharacter),
+            body: JSON.stringify(characterData),
         })
             .then((response) => response.json())
             .then((data) => {
@@ -97,160 +101,223 @@ export default function CharacterCreator() {
 
             {/* Character Creation Form */}
             <form onSubmit={handleCharacterSubmit}>
-                <input
-                    type="text"
-                    placeholder="Name"
-                    value={newCharacter.name}
-                    onChange={(e) => setNewCharacter({ ...newCharacter, name: e.target.value })}
-                />
+                <Card style={{ marginBottom: '20px' }}>
+                    <CardContent>
+                        <h3>Character Details:</h3>
 
-                {/* Race */}
-                <select
-                    value={newCharacter.race}
-                    onChange={(e) => setNewCharacter({ ...newCharacter, race: e.target.value })}
-                >
-                    <option value="">-- Select Race --</option>
-                    {races.map((race, index) => (
-                        <option key={index} value={race}>
-                            {race}
-                        </option>
-                    ))}
-                </select>
+                        <Grid container spacing={2}>
 
-                {/* Class */}
-                <select
-                    value={newCharacter.class}
-                    onChange={(e) => setNewCharacter({ ...newCharacter, class: e.target.value })}
-                >
-                    <option value="">-- Select Class --</option>
-                    {classes.map((charClass, index) => (
-                        <option key={index} value={charClass}>
-                            {charClass}
-                        </option>
-                    ))}
-                </select>
+                            <Grid item xs={6} sm={4} lg={2} >
+                                <TextField
+                                    fullWidth
+                                    label="Name"
+                                    variant="outlined"
+                                    value={newCharacter.name}
+                                    onChange={(e) => setNewCharacter({ ...newCharacter, name: e.target.value })}
+                                />
+                            </Grid>
+                            {/* Race */}
+                            <Grid item xs={6} sm={4} lg={2} >
 
-                {/* Alignment */}
-                <select
-                    value={newCharacter.alignment}
-                    onChange={(e) => setNewCharacter({ ...newCharacter, alignment: e.target.value })}
-                >
-                    <option value="">-- Select Alignment --</option>
-                    {alignments.map((alignment, index) => (
-                        <option key={index} value={alignment}>
-                            {alignment}
-                        </option>
-                    ))}
-                </select>
+                                <TextField
+                                    fullWidth
+                                    select
+                                    label="Race"
+                                    variant="outlined"
+                                    value={newCharacter.race}
+                                    onChange={(e) => setNewCharacter({ ...newCharacter, race: e.target.value })}
+                                    SelectProps={{ native: true }}
+                                >
+                                    <option value=""> </option>
+                                    {races.map((race, index) => (
+                                        <option key={index} value={race}>{race}</option>
+                                    ))}
+                                </TextField>
+                            </Grid>
+                            {/* Class */}
+                            <Grid item xs={6} sm={4} lg={2} >
 
-                {/* Background */}
-                <select
-                    value={newCharacter.background}
-                    onChange={(e) => setNewCharacter({ ...newCharacter, background: e.target.value })}
-                >
-                    <option value="">-- Select Background --</option>
-                    {backgrounds.map((bg, index) => (
-                        <option key={index} value={bg}>
-                            {bg}
-                        </option>
-                    ))}
-                </select>
+                                <TextField
+                                    fullWidth
+                                    select
+                                    label="Class"
+                                    variant="outlined"
+                                    value={newCharacter.class}
+                                    onChange={(e) => setNewCharacter({ ...newCharacter, class: e.target.value })}
+                                    SelectProps={{ native: true }}
+                                >
+                                    <option value=""></option>
+                                    {classes.map((charClass, index) => (
+                                        <option key={index} value={charClass}>
+                                            {charClass}
+                                        </option>
+                                    ))}
+                                </TextField>
+                            </Grid>
+                            {/* Alignment */}
+                            <Grid item xs={6} sm={4} lg={2} >
+
+                                <TextField
+                                    fullWidth
+                                    select
+                                    label="Alignment"
+                                    variant="outlined"
+                                    SelectProps={{ native: true }}
+                                    value={newCharacter.alignment}
+                                    onChange={(e) => setNewCharacter({ ...newCharacter, alignment: e.target.value })}
+                                >
+                                    <option value=""></option>
+                                    {alignments.map((alignment, index) => (
+                                        <option key={index} value={alignment}>
+                                            {alignment}
+                                        </option>
+                                    ))}
+                                </TextField>
+                            </Grid>
+                            {/* Background */}
+                            <Grid item xs={6} sm={4} lg={2} >
+
+                                <TextField
+                                    fullWidth
+                                    select
+                                    label="Background"
+                                    variant="outlined"
+                                    SelectProps={{ native: true }}
+                                    value={newCharacter.background}
+                                    onChange={(e) => setNewCharacter({ ...newCharacter, background: e.target.value })}
+                                >
+                                    <option value=""></option>
+                                    {backgrounds.map((bg, index) => (
+                                        <option key={index} value={bg}>
+                                            {bg}
+                                        </option>
+                                    ))}
+                                </TextField>
+                            </Grid>
+                        </Grid>
+                    </CardContent>
+                </Card>
 
                 {/* Abilities (Strength, Dexterity, etc.) */}
-                <h3>Abilities</h3>
-                <Grid container spacing={2}>
-                    {Object.keys(newCharacter.abilities).map((ability, index) => (
-                        <Grid item xs={6} sm={4} lg={2} key={index}>
-                            <FormControl>
-
-                                <FormLabel>{ability}: </FormLabel>
-                                <input
-                                    type="number"
-                                    value={newCharacter.abilities[ability]}
-                                    onChange={(e) =>
-                                        setNewCharacter({
-                                            ...newCharacter,
-                                            abilities: {
-                                                ...newCharacter.abilities,
-                                                [ability]: parseInt(e.target.value),
-                                            },
-                                        })
-                                    }
-                                />
-                            </FormControl>
-                        </Grid>
-                    ))}
-                </Grid>
-                {/* Skills */}
-                <h3>Skills</h3>
-                <Grid container spacing={2}>
-                    {skillsList.map((skill, index) => (
-                        <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-                            <FormControlLabel
-                                control={
-                                    <Checkbox
-                                        checked={newCharacter.skills.includes(skill)}
-                                        onChange={(e) => {
-                                            const skills = [...newCharacter.skills];
-                                            if (e.target.checked) {
-                                                skills.push(skill);
-                                            } else {
-                                                const index = skills.indexOf(skill);
-                                                if (index !== -1) {
-                                                    skills.splice(index, 1);
-                                                }
+                <Card style={{ marginBottom: '20px' }}>
+                    <CardContent>
+                        <Grid item xs={12}>
+                            <h3>Abilities</h3>
+                            <Grid container spacing={2}>
+                                {Object.keys(newCharacter.abilities).map((ability, index) => (
+                                    <Grid item xs={6} sm={4} md={2} key={index}>
+                                        <TextField
+                                            fullWidth
+                                            label={ability.charAt(0).toUpperCase() + ability.slice(1)} // Capitalize first letter
+                                            type="number"
+                                            variant="outlined"
+                                            value={newCharacter.abilities[ability]}
+                                            onChange={(e) =>
+                                                setNewCharacter({
+                                                    ...newCharacter,
+                                                    abilities: {
+                                                        ...newCharacter.abilities,
+                                                        [ability]: parseInt(e.target.value),
+                                                    },
+                                                })
                                             }
-                                            setNewCharacter({ ...newCharacter, skills });
-                                        }}
-                                    />
-                                }
-                                label={skill}
-                            />
+                                        />
+                                    </Grid>
+                                ))}
+                            </Grid>
                         </Grid>
-                    ))}
-                </Grid>
-
+                    </CardContent>
+                </Card>
+                {/* Skills */}
+                <Card style={{ marginBottom: '20px' }}>
+                    <CardContent>
+                        <h3>Skills</h3>
+                        <CardContent sx={{ p: 0 }}>
+                            <Grid container spacing={2} justifyContent="center" alignContent={"center"}>
+                                {skillsList.map((skill, index) => (
+                                    <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+                                        <FormControlLabel
+                                            control={
+                                                <Checkbox
+                                                    checked={newCharacter.skills.includes(skill)}
+                                                    onChange={(e) => {
+                                                        const skills = [...newCharacter.skills];
+                                                        if (e.target.checked) {
+                                                            skills.push(skill);
+                                                        } else {
+                                                            const index = skills.indexOf(skill);
+                                                            if (index !== -1) {
+                                                                skills.splice(index, 1);
+                                                            }
+                                                        }
+                                                        setNewCharacter({ ...newCharacter, skills });
+                                                    }}
+                                                />
+                                            }
+                                            label={skill}
+                                        />
+                                    </Grid>
+                                ))}
+                            </Grid>
+                        </CardContent>
+                    </CardContent>
+                </Card>
 
 
                 {/* Hit Points */}
-                <div>
-                    <label>Hit Points: </label>
-                    <input
-                        type="number"
-                        value={newCharacter.hitPoints}
-                        onChange={(e) => setNewCharacter({ ...newCharacter, hitPoints: parseInt(e.target.value) })}
-                    />
-                </div>
+                <Card style={{ marginBottom: '20px' }}>
+                    <CardContent>
+                        <Grid container spacing={2}>
+                            <Grid item xs={12} sm={6}>
+                                <TextField
+                                    fullWidth
+                                    label="Hit Points"
+                                    type="number"
+                                    variant="outlined"
+                                    value={newCharacter.hitPoints}
+                                    onChange={(e) => setNewCharacter({ ...newCharacter, hitPoints: parseInt(e.target.value) })}
+                                />
+                            </Grid>
 
-                {/* Hit Dice */}
-                <div>
-                    <label>Hit Dice: </label>
-                    <input
-                        type="text"
-                        value={newCharacter.hitDice}
-                        onChange={(e) => setNewCharacter({ ...newCharacter, hitDice: e.target.value })}
-                    />
-                </div>
+                            {/* Hit Dice */}
+                            <Grid item xs={12} sm={6}>
+                                <TextField
+                                    fullWidth
+                                    label="Hit Dice"
+                                    variant="outlined"
+                                    value={newCharacter.hitDice}
+                                    onChange={(e) => setNewCharacter({ ...newCharacter, hitDice: e.target.value })}
+                                />
+                            </Grid>
 
-                {/* Inventory */}
-                <div>
-                    <label>Inventory: </label>
-                    <textarea
-                        value={newCharacter.inventory}
-                        onChange={(e) => setNewCharacter({ ...newCharacter, inventory: e.target.value })}
-                    />
-                </div>
-
-                {/* Character Description */}
-                <div>
-                    <label>Character Description: </label>
-                    <textarea
-                        value={newCharacter.description}
-                        onChange={(e) => setNewCharacter({ ...newCharacter, description: e.target.value })}
-                    />
-                </div>
-
-                <button type="submit">Add Character</button>
+                            {/* Inventory */}
+                            <Grid item xs={12}>
+                                <TextField
+                                    fullWidth
+                                    label="Inventory"
+                                    variant="outlined"
+                                    multiline
+                                    rows={3}
+                                    value={newCharacter.inventory}
+                                    onChange={(e) => setNewCharacter({ ...newCharacter, inventory: e.target.value })}
+                                />
+                            </Grid>
+                            {/* Character Description */}
+                            <Grid item xs={12}>
+                                <TextField
+                                    fullWidth
+                                    label="Character Description"
+                                    variant="outlined"
+                                    multiline
+                                    rows={4}
+                                    value={newCharacter.description}
+                                    onChange={(e) => setNewCharacter({ ...newCharacter, description: e.target.value })}
+                                />
+                            </Grid>
+                        </Grid>
+                    </CardContent>
+                </Card>
+                <Button variant="contained" type="submit">Add Character</Button>
             </form >
         </div >
 

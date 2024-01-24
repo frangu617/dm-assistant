@@ -1,27 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const Character = require('../models/Character');
+const Character = require('../models/Character'); // Adjust the path as needed
 
 // Create a new character
-router.post('/',  (req, res) => {
-    Character.db.create(req.body)
-    .then((data) => {        
-        res.status(201).json(data);
-    })
-    .catch((error) => {
+router.post('/', async (req, res) => {
+    try {
+        const character = new Character(req.body);
+        await character.save();
+        res.status(201).json(character);
+    } catch (error) {
         res.status(400).json({ error: 'Could not create character' });
-        console.log(error);
-
-    })
-
-
-    // try {
-    //     const character = new Character(req.body);
-    //     await character.save();
-    //     res.status(201).json(character);
-    // } catch (error) {
-    //     res.status(400).json({ error: 'Could not create character' });
-    // }
+    }
 });
 
 // Get a list of all characters
@@ -39,10 +28,9 @@ router.get('/:id', async (req, res) => {
     try {
         const character = await Character.findById(req.params.id);
         if (!character) {
-            res.status(404).json({ error: 'Character not found' });
-        } else {
-            res.status(200).json(character);
+            return res.status(404).json({ error: 'Character not found' });
         }
+        res.status(200).json(character);
     } catch (error) {
         res.status(500).json({ error: 'Internal server error' });
     }
@@ -51,16 +39,11 @@ router.get('/:id', async (req, res) => {
 // Update a character by ID
 router.put('/:id', async (req, res) => {
     try {
-        const character = await Character.findByIdAndUpdate(
-            req.params.id,
-            req.body,
-            { new: true }
-        );
+        const character = await Character.findByIdAndUpdate(req.params.id, req.body, { new: true });
         if (!character) {
-            res.status(404).json({ error: 'Character not found' });
-        } else {
-            res.status(200).json(character);
+            return res.status(404).json({ error: 'Character not found' });
         }
+        res.status(200).json(character);
     } catch (error) {
         res.status(500).json({ error: 'Internal server error' });
     }
@@ -71,10 +54,9 @@ router.delete('/:id', async (req, res) => {
     try {
         const character = await Character.findByIdAndDelete(req.params.id);
         if (!character) {
-            res.status(404).json({ error: 'Character not found' });
-        } else {
-            res.status(204).json(); // No content for successful deletion
+            return res.status(404).json({ error: 'Character not found' });
         }
+        res.status(204).send();
     } catch (error) {
         res.status(500).json({ error: 'Internal server error' });
     }
