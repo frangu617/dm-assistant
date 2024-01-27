@@ -2,7 +2,7 @@ import React from "react";
 import { Typography, Button, Card, CardContent, Grid } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
-import oldTimeyTheme from "./oldTimey";
+import oldTimeyTheme from "./themes/oldTimey";
 
 export default function Home() {
     return (
