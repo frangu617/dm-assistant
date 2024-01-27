@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { List, ListItem, ListItemText, ListItemAvatar, Avatar, CircularProgress, Typography, Box, Container, Paper, Card, CardContent } from '@mui/material';
+import { CircularProgress, Typography, Box, Container, Paper, MenuItem, FormControl, InputLabel, Select,Card, CardContent } from '@mui/material';
+import DOMPurify from 'dompurify';
 
 function RaceSearch() {
     const [races, setRaces] = useState([]);
+    const [selectedRaceIndex, setSelectedRaceIndex] = useState('');
     const [selectedRace, setSelectedRace] = useState(null);
+    const [subraces, setSubraces] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
 
@@ -12,7 +15,8 @@ function RaceSearch() {
         fetch("https://www.dnd5eapi.co/api/races")
             .then(response => response.json())
             .then(data => {
-                setRaces(data.results.map(race => ({ ...race, img: race.img || null })));
+                setRaces(data.results);
+                
                 setIsLoading(false);
             })
             .catch(error => {
@@ -21,18 +25,44 @@ function RaceSearch() {
             });
     }, []);
 
+    useEffect(() => {
+        if (selectedRaceIndex) {
+            fetchRaceDetails(selectedRaceIndex);
+            
+
+        }
+    }, [selectedRaceIndex]);
+
     const fetchRaceDetails = (index) => {
         setIsLoading(true);
         fetch(`https://www.dnd5eapi.co/api/races/${index}`)
             .then(response => response.json())
             .then(data => {
                 setSelectedRace(data);
+                fetchSubRaces(index);
                 setIsLoading(false);
             })
             .catch(error => {
                 setError(error.toString());
                 setIsLoading(false);
             });
+    };
+    const fetchSubRaces = (index) => {
+        setIsLoading(true);
+        fetch(`https://www.dnd5eapi.co/api/races/${index}/subraces`)
+            .then(response => response.json())
+            .then(data => {
+                setSubraces(data.results);
+                setIsLoading(false);
+            })
+            .catch(error => {
+                setError(error.toString());
+                setIsLoading(false);
+            });
+    }
+
+    const handleRaceChange = (event) => {
+        setSelectedRaceIndex(event.target.value);
     };
 
     const formatValue = (value, level = 0) => {
@@ -58,44 +88,56 @@ function RaceSearch() {
             return value.toString();
         }
     };
+     const renderRaceData = (data) => {
+         if (!data) return null;
 
-    const renderRaceData = (data) => {
-        if (!data) return null;
+         return Object.entries(data).map(([key, value], i) => (
+             <Typography key={i} variant="body2" component="div" sx={{ mt: 1 }}>
+                 <strong>{key}:</strong> {formatValue(value)}
+             </Typography>
+         ));
+     }
 
-        return Object.entries(data).map(([key, value], i) => (
-            <Typography key={i} variant="body2" component="div" sx={{ mt: 1 }}>
-                <strong>{key}:</strong> {formatValue(value)}
-            </Typography>
+     const renderSubRaces = () => {
+        // Use the `subraces` state directly
+        if (subraces.length === 0) return <Typography variant="body1">None</Typography>;
+    
+        return subraces.map((subrace, i) => (
+            <Typography key={i} variant="body1">{subrace.name}</Typography>
         ));
     };
 
     return (
-        <Container sx={{ display: 'flex', my: 4 }}>
-            <Box sx={{ width: '30%', mr: 2 }}>
-                <Paper elevation={3} sx={{ maxHeight: 500, overflow: 'auto' }}>
-                    <List>
-                        {isLoading && <CircularProgress />}
-                        {error && <Typography color="error">{error}</Typography>}
-                        {races.map((race, index) => (
-                            <ListItem button key={index} onClick={() => fetchRaceDetails(race.index)}>
-                                {race.img && (
-                                    <ListItemAvatar>
-                                        <Avatar alt={race.name} src={race.img} />
-                                    </ListItemAvatar>
-                                )}
-                                <ListItemText primary={race.name} />
-                            </ListItem>
-                        ))}
-                    </List>
-                </Paper>
-            </Box>
-            <Box sx={{ width: '70%' }}>
-                <Paper elevation={3} sx={{ p: 2, minHeight: 500 }}>
+        <Container sx={{ display: 'flex', flexDirection: 'column', my: 4 }}>
+            <FormControl fullWidth sx={{ mb: 2 }}>
+                <InputLabel id="race-select-label">Select Race</InputLabel>
+                <Select
+                    labelId="race-select-label"
+                    id="race-select"
+                    value={selectedRaceIndex}
+                    label="Select Race"
+                    onChange={handleRaceChange}
+                >
+                    {races.map((race) => (
+                        <MenuItem key={race.index} value={race.index}>
+                            {race.name}
+                        </MenuItem>
+                    ))}
+                </Select>
+            </FormControl>
+            <Box sx={{ width: '100%' }}>
+                <Paper elevation={3} sx={{ p: 2, minHeight: 500, overflow: 'auto' }}>
+                    {isLoading && <CircularProgress />}
+                    {error && <Typography color="error">{error}</Typography>}
                     {selectedRace && (
                         <>
-                            <Typography variant="h5" component="h2">{selectedRace.name}</Typography>
-                            {renderRaceData(selectedRace)}
-                        </>
+                            <Typography variant="h4" component="h2">{selectedRace.name}</Typography>
+                            
+                            {/* <Typography variant="body1" component="h3"><strong>Subraces: </strong>{renderSubRaces()}  </Typography>
+                            <Typography variant="body1" component="h3"><strong>Speed: </strong>{selectedRace.speed}</Typography>
+                            <Typography variant="body1" component="h3"><strong>Ability Bonuses: </strong>{}</Typography>
+                            <Typography variant ="body1" component="h3"><strong>Starting Proficiencies: </strong>{}</Typography> */}
+                        {renderRaceData(selectedRace)}</>
                     )}
                 </Paper>
             </Box>

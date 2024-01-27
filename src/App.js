@@ -17,11 +17,11 @@ import RulesSearch from './components/reference_guide/RulesSearch';
 function App() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [diceMenuAnchorEl, setDiceMenuAnchorEl] = useState(null);
-  const [monstersMenuAnchorEl, setMonstersMenuAnchorEl] = useState([]);
+  const [referenceMenuAnchorEl, setReferenceMenuAnchorEl] = useState([]);
 
   const openCharacterMenu = Boolean(anchorEl);
   const openDiceMenu = Boolean(diceMenuAnchorEl);
-  const openMonsterMenu = Boolean(monstersMenuAnchorEl)
+  const openReferenceMenu = Boolean(referenceMenuAnchorEl)
 
   const handleCharacterMenuClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -31,13 +31,13 @@ function App() {
     setDiceMenuAnchorEl(event.currentTarget);
   };
 
-  const handleMonstersMenuClick = (event) => {
-    setMonstersMenuAnchorEl(event.currentTarget);
+  const handleReferenceMenuClick = (event) => {
+    setReferenceMenuAnchorEl(event.currentTarget);
   }
   const handleClose = () => {
     setAnchorEl(null);
     setDiceMenuAnchorEl(null);
-    setMonstersMenuAnchorEl(null);
+    setReferenceMenuAnchorEl(null);
   };
 
   return (
@@ -104,19 +104,19 @@ function App() {
             </Menu>
             <Button
 
-              aria-controls="monster-menu"
+              aria-controls="reference-menu"
               aria-haspopup="true"
-              onClick={handleMonstersMenuClick}
+              onClick={handleReferenceMenuClick}
               color="inherit"
-              endIcon={openMonsterMenu ? <ArrowDropDownIcon /> : <ArrowDropDownIcon />}
+              endIcon={openReferenceMenu ? <ArrowDropDownIcon /> : <ArrowDropDownIcon />}
             >
               Reference
             </Button>
             <Menu
-              id="monster-menu"
-              anchorEl={monstersMenuAnchorEl}
+              id="reference-menu"
+              anchorEl={referenceMenuAnchorEl}
               keepMounted
-              open={openMonsterMenu}
+              open={openReferenceMenu}
               onClose={handleClose}>
               <MenuItem onClick={handleClose}>
                 <NavLink to="/rules-search" style={{ textDecoration: 'none', color: 'inherit' }}>Rules</NavLink>

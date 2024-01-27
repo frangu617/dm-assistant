@@ -3,6 +3,7 @@ import { Typography, Button, Card, CardContent, Grid } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
 import oldTimeyTheme from "./themes/oldTimey";
+import DnDChatbot from "./OpenAI";
 
 export default function Home() {
     return (
@@ -28,6 +29,8 @@ export default function Home() {
                     <NavLink to="/dice"><Button variant="contained">Roll Some dice</Button></NavLink>
                 </Grid>
             </Grid>
+            <DnDChatbot />
+
         </div>
     );
 }
