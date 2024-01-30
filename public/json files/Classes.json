@@ -1,0 +1,2542 @@
+[
+    {
+        "Class": null,
+        "Subclass": null,
+        "Notes": null,
+        "Source": null,
+        "Page": null,
+        "Other Printings": null,
+        "null": "Third Party",
+        "Reprintings": null
+    },
+    {
+        "Class": "Barbarian",
+        "Subclass": "Path of Blood",
+        "Notes": null,
+        "Source": "Dark Arts Player's Companion",
+        "Page": 8.0,
+        "Other Printings": "Eberron: Rising from the Last War 58",
+        "null": "Creature Codex",
+        "Reprintings": null
+    },
+    {
+        "Class": "Bard",
+        "Subclass": "College of Shadowfell",
+        "Notes": null,
+        "Source": "Dark Arts Player's Companion",
+        "Page": 9.0,
+        "Other Printings": null,
+        "null": "Dark Arts Player's Companion",
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Blood Domain",
+        "Notes": null,
+        "Source": "Dark Arts Player's Companion",
+        "Page": 10.0,
+        "Other Printings": "Eberron: Rising from the Last War 59",
+        "null": "DM's Guild: Blood Hunter Class for D&D 5e (2020)",
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Night Domain",
+        "Notes": null,
+        "Source": "Dark Arts Player's Companion",
+        "Page": 11.0,
+        "Other Printings": "Eberron: Rising from the Last War 60",
+        "null": "DM's Guild: Blood Magic",
+        "Reprintings": null
+    },
+    {
+        "Class": "Druid",
+        "Subclass": "Circle of Twilight",
+        "Notes": null,
+        "Source": "Dark Arts Player's Companion",
+        "Page": 12.0,
+        "Other Printings": null,
+        "null": "DM's Guild: College of the Maestro",
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Blood Knight",
+        "Notes": null,
+        "Source": "Dark Arts Player's Companion",
+        "Page": 13.0,
+        "Other Printings": null,
+        "null": "DM's Guild: Expanded Racial Feats",
+        "Reprintings": null
+    },
+    {
+        "Class": "Monk",
+        "Subclass": "Way of the Bloodied Fist",
+        "Notes": null,
+        "Source": "Dark Arts Player's Companion",
+        "Page": 14.0,
+        "Other Printings": null,
+        "null": "DM's Guild: Exploring Eberron",
+        "Reprintings": null
+    },
+    {
+        "Class": "Paladin",
+        "Subclass": "Oath of the Grave",
+        "Notes": null,
+        "Source": "Dark Arts Player's Companion",
+        "Page": 15.0,
+        "Other Printings": null,
+        "null": "DM's Guild: Gunslinger Martial Archetype for Fighters",
+        "Reprintings": null
+    },
+    {
+        "Class": "Ranger",
+        "Subclass": "Nightstalker",
+        "Notes": null,
+        "Source": "Dark Arts Player's Companion",
+        "Page": 16.0,
+        "Other Printings": null,
+        "null": "DM's Guild: Morgrave Miscellany",
+        "Reprintings": null
+    },
+    {
+        "Class": "Rogue",
+        "Subclass": "Shadow",
+        "Notes": null,
+        "Source": "Dark Arts Player's Companion",
+        "Page": 17.0,
+        "Other Printings": null,
+        "null": "DM's Guild: Volo's Complete Subrace Handbook",
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Deathtouched",
+        "Notes": null,
+        "Source": "Dark Arts Player's Companion",
+        "Page": 18.0,
+        "Other Printings": null,
+        "null": "DM's Guild: Wayfinder's Guide to Eberron",
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Vampiric Bloodline",
+        "Notes": null,
+        "Source": "Dark Arts Player's Companion",
+        "Page": 19.0,
+        "Other Printings": null,
+        "null": "Fifth Edition Foes",
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Patron: The Archlich",
+        "Notes": null,
+        "Source": "Dark Arts Player's Companion",
+        "Page": 20.0,
+        "Other Printings": null,
+        "null": "Monster a Day Compendium 2.0",
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "School of Hemomancy",
+        "Notes": null,
+        "Source": "Dark Arts Player's Companion",
+        "Page": 22.0,
+        "Other Printings": null,
+        "null": "Planeshift: Amonkhet",
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "School of Reawakening",
+        "Notes": null,
+        "Source": "Dark Arts Player's Companion",
+        "Page": 22.0,
+        "Other Printings": null,
+        "null": "Planeshift: Dominaria",
+        "Reprintings": null
+    },
+    {
+        "Class": "Blood Hunter",
+        "Subclass": "Order of the Ghostslayer",
+        "Notes": null,
+        "Source": "DM's Guild: Blood Hunter Class for D&D 5e (2020)",
+        "Page": 5.0,
+        "Other Printings": "Tal'Dorei Campaign Setting 102",
+        "null": "Planeshift: Innistrad",
+        "Reprintings": null
+    },
+    {
+        "Class": "Blood Hunter",
+        "Subclass": "Order of the Profane Soul",
+        "Notes": null,
+        "Source": "DM's Guild: Blood Hunter Class for D&D 5e (2020)",
+        "Page": 6.0,
+        "Other Printings": null,
+        "null": "Planeshift: Ixalan",
+        "Reprintings": null
+    },
+    {
+        "Class": "Blood Hunter",
+        "Subclass": "Order of the Mutant",
+        "Notes": null,
+        "Source": "DM's Guild: Blood Hunter Class for D&D 5e (2020)",
+        "Page": 8.0,
+        "Other Printings": "Sword Coast Adventurer's Guide 121 (additional totems)",
+        "null": "Planeshift: Kaladesh",
+        "Reprintings": null
+    },
+    {
+        "Class": "Blood Hunter",
+        "Subclass": "Order of the Lycan",
+        "Notes": null,
+        "Source": "DM's Guild: Blood Hunter Class for D&D 5e (2020)",
+        "Page": 9.0,
+        "Other Printings": null,
+        "null": "Planeshift: Zendikar",
+        "Reprintings": null
+    },
+    {
+        "Class": "Barbarian",
+        "Subclass": "Bloodrage Savage",
+        "Notes": null,
+        "Source": "DM's Guild: Blood Magic",
+        "Page": 6.0,
+        "Other Printings": null,
+        "null": "Sandy Petersen's Cthulhu Mythos",
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Blood Thrall",
+        "Notes": null,
+        "Source": "DM's Guild: Blood Magic",
+        "Page": 7.0,
+        "Other Printings": null,
+        "null": "Tal'Dorei Campaign Setting",
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "King's Blood (Bloodline Sorcery)",
+        "Notes": null,
+        "Source": "DM's Guild: Blood Magic",
+        "Page": 8.0,
+        "Other Printings": null,
+        "null": "Tal'Dorei Campaign Setting Reborn",
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Blood Magic 1",
+        "Notes": null,
+        "Source": "DM's Guild: Blood Magic",
+        "Page": 10.0,
+        "Other Printings": "Mythic Odysseys of Theros 28",
+        "null": "Tome of Beasts",
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Blood Magic 2",
+        "Notes": null,
+        "Source": "DM's Guild: Blood Magic",
+        "Page": 12.0,
+        "Other Printings": null,
+        "null": "Tome of Beasts 2",
+        "Reprintings": null
+    },
+    {
+        "Class": "Bard",
+        "Subclass": "College of the Maestro",
+        "Notes": null,
+        "Source": "DM's Guild: College of the Maestro",
+        "Page": 1.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Artificer",
+        "Subclass": "Forge Adept",
+        "Notes": null,
+        "Source": "DM's Guild: Exploring Eberron",
+        "Page": 214.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Artificer",
+        "Subclass": "Maverick",
+        "Notes": null,
+        "Source": "DM's Guild: Exploring Eberron",
+        "Page": 215.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Bard",
+        "Subclass": "College of the Dirge Singer",
+        "Notes": null,
+        "Source": "DM's Guild: Exploring Eberron",
+        "Page": 216.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Mind Domain",
+        "Notes": null,
+        "Source": "DM's Guild: Exploring Eberron",
+        "Page": 217.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Druid",
+        "Subclass": "Circle of the Forged",
+        "Notes": null,
+        "Source": "DM's Guild: Exploring Eberron",
+        "Page": 217.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Monk",
+        "Subclass": "Way of the Living Weapon",
+        "Notes": null,
+        "Source": "DM's Guild: Exploring Eberron",
+        "Page": 218.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Gunslinger",
+        "Notes": null,
+        "Source": "DM's Guild: Gunslinger Martial Archetype for Fighters",
+        "Page": 1.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Barbarian",
+        "Subclass": "Path of the Extreme Explorer",
+        "Notes": null,
+        "Source": "DM's Guild: Morgrave Miscellany",
+        "Page": 11.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Bard",
+        "Subclass": "College of Keys",
+        "Notes": null,
+        "Source": "DM's Guild: Morgrave Miscellany",
+        "Page": 17.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Sovereign Domain",
+        "Notes": null,
+        "Source": "DM's Guild: Morgrave Miscellany",
+        "Page": 23.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Druid",
+        "Subclass": "Circle of the Arbiter",
+        "Notes": null,
+        "Source": "DM's Guild: Morgrave Miscellany",
+        "Page": 31.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Bone Knight",
+        "Notes": null,
+        "Source": "DM's Guild: Morgrave Miscellany",
+        "Page": 40.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Vigilante",
+        "Notes": null,
+        "Source": "DM's Guild: Morgrave Miscellany",
+        "Page": 42.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Monk",
+        "Subclass": "Way of the Argent Fist",
+        "Notes": null,
+        "Source": "DM's Guild: Morgrave Miscellany",
+        "Page": 47.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Paladin",
+        "Subclass": "Oath of Sacrament",
+        "Notes": null,
+        "Source": "DM's Guild: Morgrave Miscellany",
+        "Page": 53.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Ranger",
+        "Subclass": "Field Marshal Conclave",
+        "Notes": null,
+        "Source": "DM's Guild: Morgrave Miscellany",
+        "Page": 59.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Rogue",
+        "Subclass": "Divine Herald",
+        "Notes": null,
+        "Source": "DM's Guild: Morgrave Miscellany",
+        "Page": 67.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Progenitor Spark",
+        "Notes": null,
+        "Source": "DM's Guild: Morgrave Miscellany",
+        "Page": 75.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Boon: Pact of the Host",
+        "Notes": null,
+        "Source": "DM's Guild: Morgrave Miscellany",
+        "Page": 82.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "School of Antiquities",
+        "Notes": null,
+        "Source": "DM's Guild: Morgrave Miscellany",
+        "Page": 89.0,
+        "Other Printings": "Tal'Dorei Campaign Setting 101",
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Death Domain",
+        "Notes": null,
+        "Source": "Dungeon Master's Guide",
+        "Page": 96.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Paladin",
+        "Subclass": "Oathbreaker",
+        "Notes": null,
+        "Source": "Dungeon Master's Guide",
+        "Page": 97.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Echo Knight",
+        "Notes": null,
+        "Source": "Explorer's Guide to Wildemount",
+        "Page": 183.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Chronurgy Magic",
+        "Notes": null,
+        "Source": "Explorer's Guide to Wildemount",
+        "Page": 184.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Graviturgy Magic",
+        "Notes": null,
+        "Source": "Explorer's Guide to Wildemount",
+        "Page": 185.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Monk",
+        "Subclass": "Way of the Ascendant Dragon",
+        "Notes": null,
+        "Source": "Fizban's Treasury of Dragons",
+        "Page": 13.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Ranger",
+        "Subclass": "Drakewarden",
+        "Notes": null,
+        "Source": "Fizban's Treasury of Dragons",
+        "Page": 15.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Solidarity Domain",
+        "Notes": null,
+        "Source": "Planeshift: Amonkhet",
+        "Page": 24.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Strength Domain",
+        "Notes": null,
+        "Source": "Planeshift: Amonkhet",
+        "Page": 25.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Ambition Domain",
+        "Notes": null,
+        "Source": "Planeshift: Amonkhet",
+        "Page": 27.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Zeal Domain",
+        "Notes": null,
+        "Source": "Planeshift: Amonkhet",
+        "Page": 28.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Pyromancer",
+        "Notes": null,
+        "Source": "Planeshift: Kaladesh",
+        "Page": 9.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Barbarian",
+        "Subclass": "Path of the Berserker",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 49.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Barbarian",
+        "Subclass": "Path of the Totem Warrior",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 50.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": "Sword Coast Adventurer's Guide 121 (additional totems)"
+    },
+    {
+        "Class": "Bard",
+        "Subclass": "College of Lore",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 54.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Bard",
+        "Subclass": "College of Valor",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 55.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Knowledge Domain",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 59.0,
+        "Other Printings": "Guildmaster's Guide to Ravnica 25",
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Life Domain",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 60.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Light Domain",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 60.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Nature Domain",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 61.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Tempest Domain",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 62.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Trickery Domain",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 62.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "War Domain",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 63.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Druid",
+        "Subclass": "Circle of the Land",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 68.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Druid",
+        "Subclass": "Circle of the Moon",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 69.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Champion",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 72.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Battle Master",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 73.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Eldritch Knight",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 74.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Monk",
+        "Subclass": "Way of the Open Hand",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 79.0,
+        "Other Printings": "Guildmaster's Guide to Ravnica 26",
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Monk",
+        "Subclass": "Way of Shadow",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 80.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Monk",
+        "Subclass": "Way of the Four Elements",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 80.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Paladin",
+        "Subclass": "Oath of Devotion",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 85.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Paladin",
+        "Subclass": "Oath of the Ancients",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 86.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Paladin",
+        "Subclass": "Oath of Vengeance",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 87.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Ranger",
+        "Subclass": "Beastmaster Conclave",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 93.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Ranger",
+        "Subclass": "Hunter Conclave",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 93.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Rogue",
+        "Subclass": "Arcane Trickster",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 97.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Rogue",
+        "Subclass": "Assassin",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 97.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Rogue",
+        "Subclass": "Thief",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 97.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Draconic Bloodline",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 102.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Wild Magic",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 103.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Boon: Pact of the Blade",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 107.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Boon: Pact of the Chain",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 107.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Boon: Pact of the Tome",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 108.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Patron: The Archfey",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 108.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Patron: The Fiend",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 109.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Patron: The Great Old One",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 109.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "School of Abjuration",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 115.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "School of Conjuration",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 116.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "School of Divination",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 116.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "School of Enchantment",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 117.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "School of Evocation",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 117.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "School of Illusion",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 118.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "School of Necromancy",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 118.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "School of Transmutation",
+        "Notes": null,
+        "Source": "Player's Handbook",
+        "Page": 119.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Familiar",
+        "Notes": "Restriction: Dreamlands Cat only",
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 37.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Rogue",
+        "Subclass": "Prowler",
+        "Notes": "Restriction: Dreamlands Cat only",
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 38.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Monk",
+        "Subclass": "Necrophage",
+        "Notes": "Restriction: Ghoul only, requires racial traits",
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 39.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Ranger",
+        "Subclass": "Seabest Hunter",
+        "Notes": "Restriction: Gnorri only",
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 41.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Ruin Warden",
+        "Notes": "Restriction: Zoog only",
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 42.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Barbarian",
+        "Subclass": "Path of Delirium",
+        "Notes": "Uses setting-dependant mechanics",
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 43.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Bard",
+        "Subclass": "College of Alien Symbolism",
+        "Notes": "Uses setting-dependant mechanics",
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 45.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Elder Sign Domain",
+        "Notes": null,
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 45.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Destruction Domain",
+        "Notes": null,
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 47.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Dream Domain",
+        "Notes": null,
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 48.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Emptiness Domain",
+        "Notes": null,
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 48.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Druid",
+        "Subclass": "Circle of the Deep Herds",
+        "Notes": null,
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 49.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Druid",
+        "Subclass": "Circle of the Thousand Young",
+        "Notes": null,
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 50.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Mystery Warrior",
+        "Notes": null,
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 51.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Paladin",
+        "Subclass": "Oath of Awakening",
+        "Notes": null,
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 52.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Rogue",
+        "Subclass": "Researcher",
+        "Notes": null,
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 53.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Rogue",
+        "Subclass": "Trapsetter",
+        "Notes": null,
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 54.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Deep One Bloodline",
+        "Notes": null,
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 55.0,
+        "Other Printings": "Tal'Dorei Campaign Setting 104",
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Shub-Niggurath's Bounty",
+        "Notes": null,
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 55.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Yog-Sothoth's Bloodline",
+        "Notes": null,
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 56.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Patron: The Elder Influence",
+        "Notes": null,
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 57.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Boon: Pact of the Skull",
+        "Notes": null,
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 59.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "School of Ritualism",
+        "Notes": null,
+        "Source": "Sandy Petersen's Cthulhu Mythos",
+        "Page": 61.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Barbarian",
+        "Subclass": "Path of the Battlerager",
+        "Notes": "Restriction: Dwarf only",
+        "Source": "Sword Coast Adventurer's Guide",
+        "Page": 121.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Arcana Domain",
+        "Notes": null,
+        "Source": "Sword Coast Adventurer's Guide",
+        "Page": 125.0,
+        "Other Printings": "Sword Coast Adventurer's Guide 131",
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Purple Dragon Knight (Banneret)",
+        "Notes": null,
+        "Source": "Sword Coast Adventurer's Guide",
+        "Page": 128.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Monk",
+        "Subclass": "Way of the Long Death",
+        "Notes": null,
+        "Source": "Sword Coast Adventurer's Guide",
+        "Page": 130.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Paladin",
+        "Subclass": "Oath of the Crown",
+        "Notes": null,
+        "Source": "Sword Coast Adventurer's Guide",
+        "Page": 132.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Patron: The Undying",
+        "Notes": null,
+        "Source": "Sword Coast Adventurer's Guide",
+        "Page": 139.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Barbarian",
+        "Subclass": "Path of the Juggernaut",
+        "Notes": null,
+        "Source": "Tal'Dorei Campaign Setting Reborn",
+        "Page": 165.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": "Tal'Dorei Campaign Setting 102"
+    },
+    {
+        "Class": "Bard",
+        "Subclass": "College of Tragedy",
+        "Notes": null,
+        "Source": "Tal'Dorei Campaign Setting Reborn",
+        "Page": 167.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Blood Domain",
+        "Notes": null,
+        "Source": "Tal'Dorei Campaign Setting Reborn",
+        "Page": 168.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": "Tal'Dorei Campaign Setting 101"
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Moon Domain",
+        "Notes": null,
+        "Source": "Tal'Dorei Campaign Setting Reborn",
+        "Page": 169.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Druid",
+        "Subclass": "Circle of the Blighted",
+        "Notes": null,
+        "Source": "Tal'Dorei Campaign Setting Reborn",
+        "Page": 171.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Monk",
+        "Subclass": "Way of the Cobalt Soul",
+        "Notes": null,
+        "Source": "Tal'Dorei Campaign Setting Reborn",
+        "Page": 173.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": "Tal'Dorei Campaign Setting 104"
+    },
+    {
+        "Class": "Paladin",
+        "Subclass": "Oath of the Open Sea",
+        "Notes": null,
+        "Source": "Tal'Dorei Campaign Setting Reborn",
+        "Page": 174.0,
+        "Other Printings": "Mythic Odysseys of Theros 29",
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Runechild",
+        "Notes": null,
+        "Source": "Tal'Dorei Campaign Setting Reborn",
+        "Page": 176.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": "Tal'Dorei Campaign Setting 103"
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Blood Magic",
+        "Notes": null,
+        "Source": "Tal'Dorei Campaign Setting Reborn",
+        "Page": 178.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Artificer",
+        "Subclass": "Alchemist",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 14.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": "Eberron: Rising from the Last War 58"
+    },
+    {
+        "Class": "Artificer",
+        "Subclass": "Armorer",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 15.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Artificer",
+        "Subclass": "Artillerist",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 17.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": "Eberron: Rising from the Last War 59"
+    },
+    {
+        "Class": "Artificer",
+        "Subclass": "Battle Smith",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 18.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": "Eberron: Rising from the Last War 60"
+    },
+    {
+        "Class": "Barbarian",
+        "Subclass": "Path of the Beast",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 24.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Barbarian",
+        "Subclass": "Path of Wild Magic",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 25.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Bard",
+        "Subclass": "College of Creation",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 28.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Bard",
+        "Subclass": "College of Eloquence",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 29.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": "Mythic Odysseys of Theros 28"
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Order Domain",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 31.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": "Guildmaster's Guide to Ravnica 25"
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Peace Domain",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 32.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Twilight Domain",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 34.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Druid",
+        "Subclass": "Circle of Spores",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 36.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": "Guildmaster's Guide to Ravnica 26"
+    },
+    {
+        "Class": "Druid",
+        "Subclass": "Circle of Stars",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 38.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Druid",
+        "Subclass": "Circle of Wildfire",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 39.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Psi Warrior",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 42.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Rune Knight",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 44.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Monk",
+        "Subclass": "Way of Mercy",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 49.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Monk",
+        "Subclass": "Way of the Astral Self",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 50.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Paladin",
+        "Subclass": "Oath of Glory",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 53.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": "Mythic Odysseys of Theros 29"
+    },
+    {
+        "Class": "Paladin",
+        "Subclass": "Oath of the Watchers",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 54.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Ranger",
+        "Subclass": "Fey Wanderer",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 58.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Ranger",
+        "Subclass": "Swarmkeeper",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 59.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Rogue",
+        "Subclass": "Phantom",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 62.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Rogue",
+        "Subclass": "Soulknife",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 63.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Aberrant Mind",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 66.0,
+        "Other Printings": "Sword Coast Adventurer's Guide 135",
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Clockwork Soul",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 68.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Boon: Pact of the Talisman",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 70.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Patron: The Fathomless",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 72.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Patron: The Genie",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 73.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Bladesinging",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 76.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": "Sword Coast Adventurer's Guide 141"
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Order of Scribes",
+        "Notes": null,
+        "Source": "Tasha's Cauldron of Everything",
+        "Page": 77.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Artificer",
+        "Notes": null,
+        "Source": "UA - 2015-02-02 Eberron",
+        "Page": 3.0,
+        "Other Printings": "Sword Coast Adventurer's Guide 135",
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "City Domain",
+        "Notes": null,
+        "Source": "UA - 2015-08-03 Modern Magic",
+        "Page": 1.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Patron: The Ghost in the Machine",
+        "Notes": null,
+        "Source": "UA - 2015-08-03 Modern Magic",
+        "Page": 2.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Technomancy",
+        "Notes": null,
+        "Source": "UA - 2015-08-03 Modern Magic",
+        "Page": 3.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Bard",
+        "Subclass": "College of Satire",
+        "Notes": null,
+        "Source": "UA - 2016-01-01 Kits of Old",
+        "Page": 2.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Scout",
+        "Notes": null,
+        "Source": "UA - 2016-01-01 Kits of Old",
+        "Page": 4.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Monster Hunter",
+        "Notes": null,
+        "Source": "UA - 2016-04-04 Gothic Heroes",
+        "Page": 2.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Boon: Pact of the Star Chain",
+        "Notes": null,
+        "Source": "UA - 2016-08-01 The Faithful",
+        "Page": 1.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Patron: The Seeker",
+        "Notes": null,
+        "Source": "UA - 2016-08-01 The Faithful",
+        "Page": 1.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Protection Domain",
+        "Notes": null,
+        "Source": "UA - 2016-11-21 Cleric Domains",
+        "Page": 3.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Druid",
+        "Subclass": "Circle of Twilight",
+        "Notes": null,
+        "Source": "UA - 2016-11-28 Druid",
+        "Page": 2.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Knight",
+        "Notes": null,
+        "Source": "UA - 2016-12-05 Fighter",
+        "Page": 2.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Sharpshooter",
+        "Notes": null,
+        "Source": "UA - 2016-12-05 Fighter",
+        "Page": 3.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Monk",
+        "Subclass": "Way of Tranquility",
+        "Notes": null,
+        "Source": "UA - 2016-12-12 Monk",
+        "Page": 1.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Paladin",
+        "Subclass": "Oath of Treachery",
+        "Notes": null,
+        "Source": "UA - 2016-12-19 Paladin",
+        "Page": 2.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Ranger",
+        "Subclass": "Primeval Guardian",
+        "Notes": null,
+        "Source": "UA - 2017-01-06 Ranger & Rogue",
+        "Page": 2.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Phoenix Sorcery",
+        "Notes": null,
+        "Source": "UA - 2017-02-06 Sorcerer",
+        "Page": 1.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Sea Sorcery",
+        "Notes": null,
+        "Source": "UA - 2017-02-06 Sorcerer",
+        "Page": 2.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Stone Sorcery",
+        "Notes": null,
+        "Source": "UA - 2017-02-06 Sorcerer",
+        "Page": 3.0,
+        "Other Printings": "Tal'Dorei Campaign Setting 103",
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Patron: The Raven Queen",
+        "Notes": null,
+        "Source": "UA - 2017-02-13 Warlock & Wizard",
+        "Page": 2.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Lore Mastery",
+        "Notes": null,
+        "Source": "UA - 2017-02-13 Warlock & Wizard",
+        "Page": 5.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Mystic",
+        "Subclass": "Order of the Avatar",
+        "Notes": null,
+        "Source": "UA - 2017-03-13 The Mystic Class",
+        "Page": 5.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Mystic",
+        "Subclass": "Order of the Awakened",
+        "Notes": null,
+        "Source": "UA - 2017-03-13 The Mystic Class",
+        "Page": 6.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Mystic",
+        "Subclass": "Order of the Immortal",
+        "Notes": null,
+        "Source": "UA - 2017-03-13 The Mystic Class",
+        "Page": 6.0,
+        "Other Printings": "Sword Coast Adventurer's Guide 137",
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Mystic",
+        "Subclass": "Order of the Nomad",
+        "Notes": null,
+        "Source": "UA - 2017-03-13 The Mystic Class",
+        "Page": 7.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Mystic",
+        "Subclass": "Order of the Soul Knife",
+        "Notes": null,
+        "Source": "UA - 2017-03-13 The Mystic Class",
+        "Page": 7.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Mystic",
+        "Subclass": "Order of the Wu Jen",
+        "Notes": null,
+        "Source": "UA - 2017-03-13 The Mystic Class",
+        "Page": 8.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Theurgy",
+        "Notes": null,
+        "Source": "UA - 2017-03-20 Wizard Revisited",
+        "Page": 1.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Brute",
+        "Notes": null,
+        "Source": "UA - 2018-01-08 Three Subclasses",
+        "Page": 2.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "School of Invention",
+        "Notes": null,
+        "Source": "UA - 2018-01-08 Three Subclasses",
+        "Page": 2.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Giant Soul",
+        "Notes": null,
+        "Source": "UA - 2018-06-11 Giant Soul Sorcerer",
+        "Page": 1.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Onomancy",
+        "Notes": null,
+        "Source": "UA - 2019-10-03 Cleric, Druid, and Wizard",
+        "Page": 4.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Psionics",
+        "Notes": null,
+        "Source": "UA - 2019-11-25 Fighter, Rogue, Wizard",
+        "Page": 3.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Bard",
+        "Subclass": "Mage of Lorehold",
+        "Notes": null,
+        "Source": "UA - 2021-06-08 Mages of Strixhaven",
+        "Page": 2.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Mage of Lorehold",
+        "Notes": null,
+        "Source": "UA - 2021-06-08 Mages of Strixhaven",
+        "Page": 2.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Mage of Lorehold",
+        "Notes": null,
+        "Source": "UA - 2021-06-08 Mages of Strixhaven",
+        "Page": 2.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Druid",
+        "Subclass": "Mage of Prismari",
+        "Notes": null,
+        "Source": "UA - 2021-06-08 Mages of Strixhaven",
+        "Page": 4.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Mage of Prismari",
+        "Notes": null,
+        "Source": "UA - 2021-06-08 Mages of Strixhaven",
+        "Page": 4.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Mage of Prismari",
+        "Notes": null,
+        "Source": "UA - 2021-06-08 Mages of Strixhaven",
+        "Page": 4.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Mage of Quandrix",
+        "Notes": null,
+        "Source": "UA - 2021-06-08 Mages of Strixhaven",
+        "Page": 5.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Mage of Quandrix",
+        "Notes": null,
+        "Source": "UA - 2021-06-08 Mages of Strixhaven",
+        "Page": 5.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Bard",
+        "Subclass": "Mage of Silverquill",
+        "Notes": null,
+        "Source": "UA - 2021-06-08 Mages of Strixhaven",
+        "Page": 6.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Mage of Silverquill",
+        "Notes": null,
+        "Source": "UA - 2021-06-08 Mages of Strixhaven",
+        "Page": 6.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Mage of Silverquill",
+        "Notes": null,
+        "Source": "UA - 2021-06-08 Mages of Strixhaven",
+        "Page": 6.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Druid",
+        "Subclass": "Mage of Witherbloom",
+        "Notes": null,
+        "Source": "UA - 2021-06-08 Mages of Strixhaven",
+        "Page": 8.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Mage of Witherbloom",
+        "Notes": null,
+        "Source": "UA - 2021-06-08 Mages of Strixhaven",
+        "Page": 8.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Bard",
+        "Subclass": "College of Spirits",
+        "Notes": null,
+        "Source": "Van Richten's Guide to Ravenloft",
+        "Page": 28.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Patron: The Undead",
+        "Notes": null,
+        "Source": "Van Richten's Guide to Ravenloft",
+        "Page": 30.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Barbarian",
+        "Subclass": "Path of the Ancestral Guardian",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 9.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Barbarian",
+        "Subclass": "Path of the Storm Herald",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 10.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Barbarian",
+        "Subclass": "Path of the Zealot",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 11.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Bard",
+        "Subclass": "College of Glamour",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 14.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Bard",
+        "Subclass": "College of Swords",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 15.0,
+        "Other Printings": "Sword Coast Adventurer's Guide 141",
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Bard",
+        "Subclass": "College of Whispers",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 16.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Forge Domain",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 18.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Grave Domain",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 19.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Druid",
+        "Subclass": "Circle of Dreams",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 22.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Druid",
+        "Subclass": "Circle of the Shepherd",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 23.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Arcane Archer",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 28.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Cavalier",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 30.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Fighter",
+        "Subclass": "Samurai",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 31.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Monk",
+        "Subclass": "Way of the Drunken Master",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 33.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Monk",
+        "Subclass": "Way of the Kensei",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 34.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Monk",
+        "Subclass": "Way of the Sun Soul",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 35.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": "Sword Coast Adventurer's Guide 131"
+    },
+    {
+        "Class": "Paladin",
+        "Subclass": "Oath of Conquest",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 37.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Paladin",
+        "Subclass": "Oath of Redemption",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 38.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Ranger",
+        "Subclass": "Gloom Stalker Conclave",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 41.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Ranger",
+        "Subclass": "Horizon Walker Concalve",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 42.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Ranger",
+        "Subclass": "Monster Slayer Conclave",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 43.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Rogue",
+        "Subclass": "Inquisitive",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 45.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Rogue",
+        "Subclass": "Mastermind",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 46.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": "Sword Coast Adventurer's Guide 135"
+    },
+    {
+        "Class": "Rogue",
+        "Subclass": "Scout",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 47.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Rogue",
+        "Subclass": "Swashbuckler",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 47.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": "Sword Coast Adventurer's Guide 135"
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Divine Soul",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 50.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Shadow Sorcery",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 50.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Storm Sorcery",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 51.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": "Sword Coast Adventurer's Guide 137"
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Patron: The Celestial",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 54.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Warlock",
+        "Subclass": "Patron: The Hexblade",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 55.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "War Magic",
+        "Notes": null,
+        "Source": "Xanathar's Guide to Everything",
+        "Page": 59.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Sorcerer",
+        "Subclass": "Lunar Magic",
+        "Notes": null,
+        "Source": "UA - 2022-03-08 Heroes of Krynn",
+        "Page": 2.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Barbarian",
+        "Subclass": "Path of the Giant",
+        "Notes": null,
+        "Source": "UA - 2022-05-23 Giant Options",
+        "Page": 1.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Druid",
+        "Subclass": "Circle of the Primeval",
+        "Notes": null,
+        "Source": "UA - 2022-05-23 Giant Options",
+        "Page": 2.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Wizard",
+        "Subclass": "Runecrafter",
+        "Notes": null,
+        "Source": "UA - 2022-05-23 Giant Options",
+        "Page": 3.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    },
+    {
+        "Class": "Cleric",
+        "Subclass": "Fate Domain",
+        "Notes": null,
+        "Source": "UA - 2022-07-18 Wonders of the Multiverse",
+        "Page": 2.0,
+        "Other Printings": null,
+        "null": null,
+        "Reprintings": null
+    }
+]

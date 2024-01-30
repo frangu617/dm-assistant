@@ -8,60 +8,39 @@ function DnDChatbot() {
     const [isLoading, setIsLoading] = useState(false);
 
     const sendMessage = async () => {
-        const trimmedInput = userInput.trim();
-        if (!trimmedInput) return;
-
-        const newMessages = [...messages, { type: 'user', text: trimmedInput }];
-        setMessages(newMessages);
-        setUserInput('');
-
+        if (!userInput.trim()) return;  // Prevent sending empty messages
         setIsLoading(true);
-
-        // Call to ChatGPT API
-        const data = {
-            model: "text-davinci-003", // Use the latest model
-            prompt: trimmedInput,
-            temperature: 0.7,
-            max_tokens: 150,
-            top_p: 1.0,
-            frequency_penalty: 0.0,
-            presence_penalty: 0.0,
-        };
-
+        const userMessage = { text: userInput, type: 'user' };
+        setMessages(messages => [...messages, userMessage]);  // Add user message to chat
+    
         try {
-            const response = await fetch('https://api.openai.com/v1/completions', {
+            const response = await fetch('/api/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${process.env.REACT_APP_CHATGPT_API_KEY}`,
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify({ message: userInput }),
             });
-
-            if (!response.ok) {
-                // Handle HTTP errors
-                console.error('API request failed with status', response.status);
-                setMessages(prevMessages => [...prevMessages, { type: 'bot', text: 'Error contacting the API.' }]);
-                setIsLoading(false);
-                return;
-              }
-
-            const responseData = await response.json();
-            setMessages(prevMessages => [...prevMessages, { type: 'bot', text: responseData.choices[0].text }]);
+    
+            const data = await response.json();
+            const botMessage = { text: data, type: 'bot' };
+            setMessages(messages => [...messages, botMessage]);  // Add bot response to chat
         } catch (error) {
-            console.error('Error fetching ChatGPT response:', error);
-            setMessages(prevMessages => [...prevMessages, { type: 'bot', text: 'Sorry, I encountered an error.' }]);
+            console.error('Error sending message:', error);
+            // Optionally handle errors, e.g., by showing an error message in the UI
+        } finally {
+            setIsLoading(false);
+            setUserInput('');  // Clear input field
         }
-
-        setIsLoading(false);
     };
-
+    
     const handleKeyPress = (event) => {
         if (event.key === 'Enter' && !event.shiftKey) {
             event.preventDefault();
             sendMessage();
         }
     };
+    
     return (
         <Container maxWidth="sm" sx={{ mt: 4 }}>
             <Paper elevation={3} sx={{ p: 2, height: '500px', display: 'flex', flexDirection: 'column' }}>

@@ -13,11 +13,15 @@ import MusicSearch from './components/tools/MusicSearch';
 import MonsterSearch from './components/reference_guide/MonsterSearch';
 import RacesSearch from './components/reference_guide/RacesSearch';
 import RulesSearch from './components/reference_guide/RulesSearch';
+import AbilityScores from './components/characters/AbilityScore';
+import DnDClasses from './components/reference_guide/DnDClasses';
+import Skills from './components/characters/Skills';
+import Alignment from './components/reference_guide/Alignment';
 
 function App() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [diceMenuAnchorEl, setDiceMenuAnchorEl] = useState(null);
-  const [referenceMenuAnchorEl, setReferenceMenuAnchorEl] = useState([]);
+  const [referenceMenuAnchorEl, setReferenceMenuAnchorEl] = useState(null);
 
   const openCharacterMenu = Boolean(anchorEl);
   const openDiceMenu = Boolean(diceMenuAnchorEl);
@@ -44,8 +48,8 @@ function App() {
     <ThemeProvider theme={customTheme}>
       <CssBaseline />
       <Router>
-        <AppBar position="static">
-          <Toolbar>
+        <AppBar position="static" style={{ marginBottom: '20px'}}>
+          <Toolbar >
             <Typography variant="h6" style={{ flexGrow: 1 }}>
               <NavLink to="/" style={{ textDecoration: 'none', color: 'inherit' }}>Welcome</NavLink>
             </Typography>
@@ -127,6 +131,12 @@ function App() {
               <MenuItem onClick={handleClose}>
                 <NavLink to="/races-search" style={{ textDecoration: 'none', color: 'inherit' }}>Races</NavLink>
               </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <NavLink to="/classes" style={{ textDecoration: 'none', color: 'inherit' }}>Classes</NavLink>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <NavLink to="/alignment" style={{ textDecoration: 'none', color: 'inherit' }}>Alignment</NavLink>
+              </MenuItem>
             </Menu>
           </Toolbar>
         </AppBar>
@@ -141,6 +151,8 @@ function App() {
             <Route path="/monster-search" element={<MonsterSearch />} />
             <Route path="/races-search" element={<RacesSearch />} />
             <Route path="/rules-search" element={<RulesSearch />} />
+            <Route path="/alignment" element={<Alignment />} />
+            <Route path="/classes" element={<DnDClasses />} />
           </Routes>
         </Container>
       </Router>

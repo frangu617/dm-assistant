@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const axios = require('axios');
 require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 5000;
@@ -32,6 +33,26 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 }
+
+app.post ('/api/chat', async (req, res) => {
+  const userMessage = req.body.message;
+  try {
+    const response = await axios.post('https://api.openai.com/v1/chat/completions', {
+      model: 'gpt-3.5-turbo',
+      messages: [{ role: 'user', content: userMessage }],
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${process.env.REACT_APP_CHATGPT_API_KEY}`
+      }
+    });
+    res.json(response.data.choices[0].message.content);
+  }
+  catch (error) {
+    console.log('Error calling OpenAI API:', error);
+    res.status(500).json({ error: 'An error occurred while processing your request.' });
+  }
+});
 
 // Start the server
 app.listen(port, () => {
