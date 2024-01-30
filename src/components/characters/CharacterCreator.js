@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Grid, Button, Checkbox, FormControlLabel, TextField, Card, CardContent } from '@mui/material';
+import { Grid, Button, Checkbox, FormControlLabel, TextField, Card, CardContent, Tooltip } from '@mui/material';
+import AbilityScores from './AbilityScore';
+import Skills from './Skills';
+import DnDClasses from '../reference_guide/DnDClasses';
 
 
 export default function CharacterCreator() {
@@ -33,6 +36,8 @@ export default function CharacterCreator() {
     const alignments = ['Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'True Neutral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil'];
     const backgrounds = ['Acolyte', 'Folk Hero', 'Noble', 'Sage', 'Soldier', 'Criminal', 'Entertainer', 'Hermit', 'Outlander'];
     const skillsList = ['Acrobatics', 'Animal Handling', 'Arcana', 'Athletics', 'Deception', 'History', 'Insight', 'Intimidation', 'Investigation', 'Medicine', 'Nature', 'Perception', 'Performance', 'Persuasion', 'Religion', 'Sleight of Hand', 'Stealth', 'Survival'];
+
+
 
     const getInitialCharacterState = () => ({
         name: '',
@@ -98,7 +103,7 @@ export default function CharacterCreator() {
     return (
         <div>
             <h2>D&D Character Creator</h2>
-
+           
             {/* Character Creation Form */}
             <form onSubmit={handleCharacterSubmit}>
                 <Card style={{ marginBottom: '20px' }}>
@@ -118,21 +123,22 @@ export default function CharacterCreator() {
                             </Grid>
                             {/* Race */}
                             <Grid item xs={6} sm={4} lg={2} >
-
-                                <TextField
-                                    fullWidth
-                                    select
-                                    label="Race"
-                                    variant="outlined"
-                                    value={newCharacter.race}
-                                    onChange={(e) => setNewCharacter({ ...newCharacter, race: e.target.value })}
-                                    SelectProps={{ native: true }}
-                                >
-                                    <option value=""> </option>
-                                    {races.map((race, index) => (
-                                        <option key={index} value={race}>{race}</option>
-                                    ))}
-                                </TextField>
+                                <Tooltip title={<span><DnDClasses prop={newCharacter.class} /> </span>}>
+                                    <TextField
+                                        fullWidth
+                                        select
+                                        label="Race"
+                                        variant="outlined"
+                                        value={newCharacter.race}
+                                        onChange={(e) => setNewCharacter({ ...newCharacter, race: e.target.value })}
+                                        SelectProps={{ native: true }}
+                                    >
+                                        <option value=""> </option>
+                                        {races.map((race, index) => (
+                                            <option key={index} value={race}>{race}</option>
+                                        ))}
+                                    </TextField>
+                                </Tooltip>
                             </Grid>
                             {/* Class */}
                             <Grid item xs={6} sm={4} lg={2} >
@@ -206,56 +212,66 @@ export default function CharacterCreator() {
                             <Grid container spacing={2}>
                                 {Object.keys(newCharacter.abilities).map((ability, index) => (
                                     <Grid item xs={6} sm={4} md={2} key={index}>
-                                        <TextField
-                                            fullWidth
-                                            label={ability.charAt(0).toUpperCase() + ability.slice(1)} // Capitalize first letter
-                                            type="number"
-                                            variant="outlined"
-                                            value={newCharacter.abilities[ability]}
-                                            onChange={(e) =>
-                                                setNewCharacter({
-                                                    ...newCharacter,
-                                                    abilities: {
-                                                        ...newCharacter.abilities,
-                                                        [ability]: parseInt(e.target.value),
-                                                    },
-                                                })
-                                            }
-                                        />
+
+                                        <Tooltip title={<span><AbilityScores ability={ability} /></span>} placement="top">
+                                            <TextField
+                                                fullWidth
+                                                label={ability.charAt(0).toUpperCase() + ability.slice(1)} // Capitalize first letter
+                                                type="number"
+                                                variant="outlined"
+                                                value={newCharacter.abilities[ability]}
+                                                onChange={(e) =>
+                                                    setNewCharacter({
+                                                        ...newCharacter,
+                                                        abilities: {
+                                                            ...newCharacter.abilities,
+                                                            [ability]: parseInt(e.target.value),
+                                                        },
+                                                    })
+                                                }
+                                            />
+                                        </Tooltip>
                                     </Grid>
                                 ))}
                             </Grid>
                         </Grid>
                     </CardContent>
+
+
                 </Card>
                 {/* Skills */}
                 <Card style={{ marginBottom: '20px' }}>
                     <CardContent>
                         <h3>Skills</h3>
+
                         <CardContent sx={{ p: 0 }}>
                             <Grid container spacing={2} justifyContent="center" alignContent={"center"}>
                                 {skillsList.map((skill, index) => (
                                     <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-                                        <FormControlLabel
-                                            control={
-                                                <Checkbox
-                                                    checked={newCharacter.skills.includes(skill)}
-                                                    onChange={(e) => {
-                                                        const skills = [...newCharacter.skills];
-                                                        if (e.target.checked) {
-                                                            skills.push(skill);
-                                                        } else {
-                                                            const index = skills.indexOf(skill);
-                                                            if (index !== -1) {
-                                                                skills.splice(index, 1);
+                                        <Tooltip title={<span><Skills skill={skill} /></span>} placement="top">
+                                            <FormControlLabel
+                                                control={
+
+                                                    <Checkbox
+                                                        checked={newCharacter.skills.includes(skill)}
+                                                        onChange={(e) => {
+                                                            const skills = [...newCharacter.skills];
+                                                            if (e.target.checked) {
+                                                                skills.push(skill);
+                                                            } else {
+                                                                const index = skills.indexOf(skill);
+                                                                if (index !== -1) {
+                                                                    skills.splice(index, 1);
+                                                                }
                                                             }
-                                                        }
-                                                        setNewCharacter({ ...newCharacter, skills });
-                                                    }}
-                                                />
-                                            }
-                                            label={skill}
-                                        />
+                                                            setNewCharacter({ ...newCharacter, skills });
+                                                        }}
+                                                    />
+
+                                                }
+                                                label={skill}
+                                            />
+                                        </Tooltip>
                                     </Grid>
                                 ))}
                             </Grid>

@@ -12,45 +12,39 @@ function Chatbot() {
     };
 
     const sendMessage = async () => {
-        const trimmedInput = userInput.trim();
-        if (!trimmedInput) return;
-
-        const userMessage = { role: 'user', content: trimmedInput };
-        setMessages((prevMessages) => [...prevMessages, userMessage]);
-        setUserInput('');
+        if (!userInput.trim()) return;  // Prevent sending empty messages
         setIsLoading(true);
-
+        const userMessage = { text: userInput, type: 'user' };
+        setMessages(messages => [...messages, userMessage]);  // Add user message to chat
+    
         try {
-            const response = await fetch('/api/chatgpt', {
+            const response = await fetch('/api/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ prompt: trimmedInput }),
+                body: JSON.stringify({ message: userInput }),
             });
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-
+    
             const data = await response.json();
-            const botMessage = { role: 'bot', content: data.choices[0].message.content };
-            setMessages((prevMessages) => [...prevMessages, botMessage]);
+            const botMessage = { text: data, type: 'bot' };
+            setMessages(messages => [...messages, botMessage]);  // Add bot response to chat
         } catch (error) {
-            console.error('Failed to send message:', error);
-            setMessages((prevMessages) => [...prevMessages, { role: 'bot', content: 'Sorry, something went wrong.' }]);
+            console.error('Error sending message:', error);
+            // Optionally handle errors, e.g., by showing an error message in the UI
+        } finally {
+            setIsLoading(false);
+            setUserInput('');  // Clear input field
         }
-
-        setIsLoading(false);
     };
-
+    
     const handleKeyPress = (event) => {
         if (event.key === 'Enter' && !event.shiftKey) {
             event.preventDefault();
             sendMessage();
         }
     };
-
+    
     return (
         <Container maxWidth="sm" sx={{ mt: 4 }}>
             <Paper elevation={3} sx={{ p: 2, height: '500px', display: 'flex', flexDirection: 'column' }}>
