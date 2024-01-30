@@ -3,6 +3,8 @@ import { Grid, Button, Checkbox, FormControlLabel, TextField, Card, CardContent,
 import AbilityScores from './AbilityScore';
 import Skills from './Skills';
 import DnDClasses from '../reference_guide/DnDClasses';
+import RaceSelector from './RaceSelector';
+import AlignmentSelector from './AlignmentSelector';
 
 
 export default function CharacterCreator() {
@@ -30,10 +32,11 @@ export default function CharacterCreator() {
         inventory: '',
         description: '',
     });
+    const [classInfo, setClassInfo] = useState(null);
     // Define arrays for races, classes, alignments, backgrounds, and skills
-    const races = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Gnome', 'Half-Elf', 'Half-Orc', 'Tiefling'];
+    // const races = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Gnome', 'Half-Elf', 'Half-Orc', 'Tiefling'];
     const classes = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard'];
-    const alignments = ['Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'True Neutral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil'];
+    // const alignments = ['Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'True Neutral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil'];
     const backgrounds = ['Acolyte', 'Folk Hero', 'Noble', 'Sage', 'Soldier', 'Criminal', 'Entertainer', 'Hermit', 'Outlander'];
     const skillsList = ['Acrobatics', 'Animal Handling', 'Arcana', 'Athletics', 'Deception', 'History', 'Insight', 'Intimidation', 'Investigation', 'Medicine', 'Nature', 'Perception', 'Performance', 'Persuasion', 'Religion', 'Sleight of Hand', 'Stealth', 'Survival'];
 
@@ -61,6 +64,7 @@ export default function CharacterCreator() {
         inventory: '',
         description: '',
     });
+   
 
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}/api/characters`)
@@ -75,6 +79,15 @@ export default function CharacterCreator() {
             .catch((error) => console.error('Error fetching characters:', error));
     }, []);
 
+    // Function to fetch class info
+    const fetchClassInfo = (className) => {
+        fetch(`${process.env.REACT_APP_API_URL}/api/classes/${className}`)
+            .then((response) => response.json())
+            .then((data) => {
+                setClassInfo(data);
+            })
+            .catch((error) => console.error('Error fetching class info:', error));
+    };
 
     const handleCharacterSubmit = (e) => {
         e.preventDefault();
@@ -100,10 +113,23 @@ export default function CharacterCreator() {
             .catch((error) => console.error('Error creating character:', error));
     };
 
+    const handleClassChange = (e) => {
+        const className = e.target.value;
+        setNewCharacter({ ...newCharacter, class: className }); // Update the selected class in the state
+        fetchClassInfo(className); // Fetch class info from the API
+    };
+
+    const handleRaceChange = (selectedRace) => {
+        setNewCharacter({ ...newCharacter, race: selectedRace });
+    };
+
+    const handleAlignmentChange = (selectedAlignment) => {
+        setNewCharacter({ ...newCharacter, alignment: selectedAlignment });
+    }
     return (
         <div>
             <h2>D&D Character Creator</h2>
-           
+
             {/* Character Creation Form */}
             <form onSubmit={handleCharacterSubmit}>
                 <Card style={{ marginBottom: '20px' }}>
@@ -122,7 +148,7 @@ export default function CharacterCreator() {
                                 />
                             </Grid>
                             {/* Race */}
-                            <Grid item xs={6} sm={4} lg={2} >
+                            {/* <Grid item xs={6} sm={4} lg={2} >
                                 <Tooltip title={<span><DnDClasses prop={newCharacter.class} /> </span>}>
                                     <TextField
                                         fullWidth
@@ -139,6 +165,12 @@ export default function CharacterCreator() {
                                         ))}
                                     </TextField>
                                 </Tooltip>
+                            </Grid> */}
+                            <Grid item xs={6} sm={4} lg={2}>
+                                <RaceSelector
+                                    selectedRace={newCharacter.race}
+                                    onRaceChange={handleRaceChange}
+                                />
                             </Grid>
                             {/* Class */}
                             <Grid item xs={6} sm={4} lg={2} >
@@ -149,7 +181,7 @@ export default function CharacterCreator() {
                                     label="Class"
                                     variant="outlined"
                                     value={newCharacter.class}
-                                    onChange={(e) => setNewCharacter({ ...newCharacter, class: e.target.value })}
+                                    onChange={handleClassChange}
                                     SelectProps={{ native: true }}
                                 >
                                     <option value=""></option>
@@ -161,7 +193,7 @@ export default function CharacterCreator() {
                                 </TextField>
                             </Grid>
                             {/* Alignment */}
-                            <Grid item xs={6} sm={4} lg={2} >
+                            {/* <Grid item xs={6} sm={4} lg={2} >
 
                                 <TextField
                                     fullWidth
@@ -179,6 +211,12 @@ export default function CharacterCreator() {
                                         </option>
                                     ))}
                                 </TextField>
+                            </Grid> */}
+                            <Grid item xs={6} sm={4} lg={2}>
+                                <AlignmentSelector
+                                    selectedAlignment={newCharacter.alignment}
+                                    onAlignmentChange={handleAlignmentChange}
+                                />
                             </Grid>
                             {/* Background */}
                             <Grid item xs={6} sm={4} lg={2} >

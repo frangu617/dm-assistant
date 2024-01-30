@@ -87,7 +87,7 @@ function RulesSearch() {
                     {error && <Typography color="error">{error}</Typography>}
                     {selectedRule && (
                         <>
-                            <Typography variant="h5" component="h2">{selectedRule.name}</Typography>
+                            
                             {renderRuleData(selectedRule)}
                         </>
                     )}

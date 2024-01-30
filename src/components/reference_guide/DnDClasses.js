@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { CircularProgress, Typography, Box, FormControl, InputLabel, Select, MenuItem, Card, CardContent } from '@mui/material';
+import { Paper, CircularProgress, Typography, Box, FormControl, InputLabel, Select, MenuItem, Card, CardContent } from '@mui/material';
 
 function DnDClasses(prop) {
     const [classes, setClasses] = useState([]);
@@ -104,6 +104,7 @@ function DnDClasses(prop) {
             {isLoading && <CircularProgress />}
             {error && <Typography color="error">{error}</Typography>}
             {classDetails && (
+                <Paper sx={{ padding: 2 }}>
                 <Box mt={4}>
                     <Typography variant="h3">{classDetails.name}</Typography>
                     <Typography>Hit Die: d{classDetails.hit_die}</Typography>
@@ -122,6 +123,7 @@ function DnDClasses(prop) {
                     <br />
                     {displaySpellcasting(classDetails.spellcasting)}
                 </Box>
+                </Paper>
             )}
             </Card>
         </Box>
