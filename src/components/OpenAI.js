@@ -1,56 +1,44 @@
 import React, { useState } from 'react';
-import { TextField, Button, CircularProgress, Typography, Box, Container, Paper } from '@mui/material';
-// import('dotenv').config();
+import { TextField, Button, Box, Container, Paper, Typography } from '@mui/material';
+import OpenAI from 'openai';
 
-function DnDChatbot() {
+function Chatbot() {
     const [messages, setMessages] = useState([]);
     const [userInput, setUserInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+
+    const handleInputChange = (event) => {
+        setUserInput(event.target.value);
+    };
 
     const sendMessage = async () => {
         const trimmedInput = userInput.trim();
         if (!trimmedInput) return;
 
-        const newMessages = [...messages, { type: 'user', text: trimmedInput }];
-        setMessages(newMessages);
+        const userMessage = { role: 'user', content: trimmedInput };
+        setMessages((prevMessages) => [...prevMessages, userMessage]);
         setUserInput('');
-
         setIsLoading(true);
 
-        // Call to ChatGPT API
-        const data = {
-            model: "text-davinci-003", // Use the latest model
-            prompt: trimmedInput,
-            temperature: 0.7,
-            max_tokens: 150,
-            top_p: 1.0,
-            frequency_penalty: 0.0,
-            presence_penalty: 0.0,
-        };
-
         try {
-            const response = await fetch('https://api.openai.com/v1/completions', {
+            const response = await fetch('/api/chatgpt', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${process.env.REACT_APP_CHATGPT_API_KEY}`,
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify({ prompt: trimmedInput }),
             });
 
             if (!response.ok) {
-                // Handle HTTP errors
-                console.error('API request failed with status', response.status);
-                setMessages(prevMessages => [...prevMessages, { type: 'bot', text: 'Error contacting the API.' }]);
-                setIsLoading(false);
-                return;
-              }
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
 
-            const responseData = await response.json();
-            setMessages(prevMessages => [...prevMessages, { type: 'bot', text: responseData.choices[0].text }]);
+            const data = await response.json();
+            const botMessage = { role: 'bot', content: data.choices[0].message.content };
+            setMessages((prevMessages) => [...prevMessages, botMessage]);
         } catch (error) {
-            console.error('Error fetching ChatGPT response:', error);
-            setMessages(prevMessages => [...prevMessages, { type: 'bot', text: 'Sorry, I encountered an error.' }]);
+            console.error('Failed to send message:', error);
+            setMessages((prevMessages) => [...prevMessages, { role: 'bot', content: 'Sorry, something went wrong.' }]);
         }
 
         setIsLoading(false);
@@ -62,36 +50,37 @@ function DnDChatbot() {
             sendMessage();
         }
     };
+
     return (
         <Container maxWidth="sm" sx={{ mt: 4 }}>
             <Paper elevation={3} sx={{ p: 2, height: '500px', display: 'flex', flexDirection: 'column' }}>
                 <Box sx={{ flexGrow: 1, overflowY: 'auto', mb: 2 }}>
                     {messages.map((msg, index) => (
-                        <Box key={index} sx={{ display: 'flex', justifyContent: msg.type === 'user' ? 'flex-end' : 'flex-start', mb: 1 }}>
+                        <Typography key={index} sx={{ textAlign: msg.role === 'user' ? 'right' : 'left' }}>
                             <Box sx={{
-                                bgcolor: msg.type === 'user' ? 'primary.main' : 'grey.300',
-                                color: msg.type === 'user' ? 'common.white' : 'text.primary',
+                                display: 'inline-block',
                                 borderRadius: '16px',
                                 p: 1,
-                                maxWidth: '80%'
+                                bgcolor: msg.role === 'user' ? 'primary.main' : 'grey.300',
+                                color: msg.role === 'user' ? 'common.white' : 'text.primary',
+                                m: 1,
                             }}>
-                                <Typography variant="body1">{msg.text}</Typography>
+                                {msg.content}
                             </Box>
-                        </Box>
+                        </Typography>
                     ))}
-                    {isLoading && <CircularProgress size={24} />}
                 </Box>
                 <TextField
                     fullWidth
                     variant="outlined"
                     label="Type your message here..."
                     value={userInput}
-                    onChange={(e) => setUserInput(e.target.value)}
-                    onKeyDown={handleKeyPress}
+                    onChange={handleInputChange}
+                    onKeyPress={handleKeyPress}
                     sx={{ mb: 2 }}
                     disabled={isLoading}
                 />
-                <Button variant="contained" fullWidth onClick={sendMessage} disabled={isLoading}>
+                <Button variant="contained" fullWidth onClick={sendMessage} disabled={isLoading || !userInput.trim()}>
                     Send
                 </Button>
             </Paper>
@@ -99,4 +88,4 @@ function DnDChatbot() {
     );
 }
 
-export default DnDChatbot;
+export default Chatbot;
