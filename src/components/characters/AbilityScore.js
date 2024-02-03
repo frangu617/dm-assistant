@@ -44,10 +44,6 @@ function AbilityScores({ ability }) {
       });
   };
 
-  const handleAbilityScoreChange = (event) => {
-    setSelectedAbilityScoreIndex(event.target.value);
-  };
-
   const renderAbilityScoreData = (data) => {
     if (!data) return null;
 
@@ -63,23 +59,6 @@ function AbilityScores({ ability }) {
 
   return (
     <Container sx={{ display: 'flex', flexDirection: 'column', my: 4 }}>
-      {/* <h4>Ability Scores Descriptions</h4>
-      <FormControl fullWidth sx={{ mb: 2 }}>
-        <InputLabel id="ability-score-select-label">Select Ability Score</InputLabel>
-        <Select
-          labelId="ability-score-select-label"
-          id="ability-score-select"
-          value={selectedAbilityScoreIndex}
-          label="Select Ability Score"
-          onChange={handleAbilityScoreChange}
-        >
-          {abilityScores.map((abilityScore) => (
-            <MenuItem key={abilityScore.index} value={abilityScore.index}>
-              {abilityScore.name}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl> */}
       {isLoading && <CircularProgress />}
       {error && <Typography color="error">{error}</Typography>}
       {selectedAbilityScore && (

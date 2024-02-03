@@ -48,19 +48,19 @@ function DnDClasses(prop) {
 
     const displayProficiencies = (proficiencies) => {
         return proficiencies.map((proficiency, index) => (
-            <Typography key={index}style={{textAlign: 'left'}}>{proficiency.name}</Typography>
+            <Typography key={index} style={{ textAlign: 'left' }}>{proficiency.name}</Typography>
         ));
     };
 
     const displayEquipment = (equipment) => {
         return equipment.map((item, index) => (
-            <Typography key={index} style={{textAlign: 'left'}}>{`${item.quantity}x ${item.equipment.name}`}</Typography>
+            <Typography key={index} style={{ textAlign: 'left' }}>{`${item.quantity}x ${item.equipment.name}`}</Typography>
         ));
     };
 
     const displayEquipmentOptions = (equipmentOptions) => {
         return equipmentOptions.map((option, index) => (
-            <Typography key={index} style ={{textAlign: 'left'}}>{option.desc}</Typography>
+            <Typography key={index} style={{ textAlign: 'left' }}>{option.desc}</Typography>
         ));
     };
 
@@ -85,7 +85,7 @@ function DnDClasses(prop) {
 
     return (
         <Box sx={{ margin: 'auto', textAlign: 'center' }}>
-            
+
             <FormControl fullWidth>
                 <InputLabel id="class-select-label">Class</InputLabel>
                 <Select
@@ -101,30 +101,30 @@ function DnDClasses(prop) {
                 </Select>
             </FormControl>
             <Card variant="outlined" sx={{ mb: 2 }}>
-            {isLoading && <CircularProgress />}
-            {error && <Typography color="error">{error}</Typography>}
-            {classDetails && (
-                <Paper sx={{ padding: 2 }}>
-                <Box mt={4}>
-                    <Typography variant="h3">{classDetails.name}</Typography>
-                    <Typography>Hit Die: d{classDetails.hit_die}</Typography>
-                    <Box mt={2}>
-                        <Typography variant="h4" style={{textAlign: 'left'}}>Proficiencies</Typography>
-                        <br/>
-                        {displayProficiencies(classDetails.proficiencies)}
-                        <br/>
-                    </Box>
-                    <Box mt={2}>
-                        <Typography variant="h4" style={{textAlign: 'left'}}>Starting Equipment</Typography>
-                        <br/>
-                        {displayEquipment(classDetails.starting_equipment)}
-                        {displayEquipmentOptions(classDetails.starting_equipment_options)}
-                    </Box>
-                    <br />
-                    {displaySpellcasting(classDetails.spellcasting)}
-                </Box>
-                </Paper>
-            )}
+                {isLoading && <CircularProgress />}
+                {error && <Typography color="error">{error}</Typography>}
+                {classDetails && (
+                    <Paper sx={{ padding: 2 }}>
+                        <Box mt={4}>
+                            <Typography variant="h3">{classDetails.name}</Typography>
+                            <Typography>Hit Die: d{classDetails.hit_die}</Typography>
+                            <Box mt={2}>
+                                <Typography variant="h4" style={{ textAlign: 'left' }}>Proficiencies</Typography>
+                                <br />
+                                {displayProficiencies(classDetails.proficiencies)}
+                                <br />
+                            </Box>
+                            <Box mt={2}>
+                                <Typography variant="h4" style={{ textAlign: 'left' }}>Starting Equipment</Typography>
+                                <br />
+                                {displayEquipment(classDetails.starting_equipment)}
+                                {displayEquipmentOptions(classDetails.starting_equipment_options)}
+                            </Box>
+                            <br />
+                            {displaySpellcasting(classDetails.spellcasting)}
+                        </Box>
+                    </Paper>
+                )}
             </Card>
         </Box>
     );

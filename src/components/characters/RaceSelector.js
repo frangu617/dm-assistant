@@ -19,6 +19,8 @@ function RaceSelector({ selectedRace, onRaceChange }) {
     useEffect(() => {
         // Fetch races when the component mounts
         fetchRaces();
+        // const races = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Gnome', 'Half-Elf', 'Half-Orc', 'Tiefling'];
+
     }, []);
 
     return (
