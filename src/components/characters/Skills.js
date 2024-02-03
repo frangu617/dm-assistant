@@ -8,15 +8,15 @@ function Skills({ skill }) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  let shortSkillName = skill.toLowerCase();
-  if(shortSkillName === "animal handling")
-  {
-    shortSkillName = "animal-handling"
-  }
-  else if(shortSkillName === "sleight of hand")
-  {
-    shortSkillName = "sleight-of-hand"
-  }
+  let shortSkillName = skill.index;
+  // if(shortSkillName === "animal handling")
+  // {
+  //   shortSkillName = "animal-handling"
+  // }
+  // else if(shortSkillName === "sleight of hand")
+  // {
+  //   shortSkillName = "sleight-of-hand"
+  // }
 
   useEffect(() => {
     setIsLoading(true);

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { CircularProgress, Typography, Box, Container, Paper, MenuItem, FormControl, InputLabel, Select,Card, CardContent } from '@mui/material';
+import { CircularProgress, Typography, Box, Container, Paper, MenuItem, FormControl, InputLabel, Select, Card, CardContent } from '@mui/material';
 import DOMPurify from 'dompurify';
 
 function RaceSearch() {
@@ -16,7 +16,7 @@ function RaceSearch() {
             .then(response => response.json())
             .then(data => {
                 setRaces(data.results);
-                
+
                 setIsLoading(false);
             })
             .catch(error => {
@@ -28,7 +28,7 @@ function RaceSearch() {
     useEffect(() => {
         if (selectedRaceIndex) {
             fetchRaceDetails(selectedRaceIndex);
-            
+
 
         }
     }, [selectedRaceIndex]);
@@ -88,20 +88,20 @@ function RaceSearch() {
             return value.toString();
         }
     };
-     const renderRaceData = (data) => {
-         if (!data) return null;
+    const renderRaceData = (data) => {
+        if (!data) return null;
 
-         return Object.entries(data).map(([key, value], i) => (
-             <Typography key={i} variant="body2" component="div" sx={{ mt: 1 }}>
-                 <strong>{key}:</strong> {formatValue(value)}
-             </Typography>
-         ));
-     }
+        return Object.entries(data).map(([key, value], i) => (
+            <Typography key={i} variant="body2" component="div" sx={{ mt: 1 }}>
+                <strong>{key}:</strong> {formatValue(value)}
+            </Typography>
+        ));
+    }
 
-     const renderSubRaces = () => {
+    const renderSubRaces = () => {
         // Use the `subraces` state directly
         if (subraces.length === 0) return <Typography variant="body1">None</Typography>;
-    
+
         return subraces.map((subrace, i) => (
             <Typography key={i} variant="body1">{subrace.name}</Typography>
         ));
@@ -132,12 +132,7 @@ function RaceSearch() {
                     {selectedRace && (
                         <>
                             <Typography variant="h4" component="h2">{selectedRace.name}</Typography>
-                            
-                            {/* <Typography variant="body1" component="h3"><strong>Subraces: </strong>{renderSubRaces()}  </Typography>
-                            <Typography variant="body1" component="h3"><strong>Speed: </strong>{selectedRace.speed}</Typography>
-                            <Typography variant="body1" component="h3"><strong>Ability Bonuses: </strong>{}</Typography>
-                            <Typography variant ="body1" component="h3"><strong>Starting Proficiencies: </strong>{}</Typography> */}
-                        {renderRaceData(selectedRace)}</>
+                            {renderRaceData(selectedRace)}</>
                     )}
                 </Paper>
             </Box>
