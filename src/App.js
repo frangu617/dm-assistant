@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, NavLink, Routes } from 'react-router-dom';
-import { AppBar, Toolbar, IconButton, Menu, MenuItem, Typography, Container, Button } from '@mui/material';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { AppBar, Toolbar, IconButton, Menu, MenuItem, Typography, Container, Button, Drawer, useTheme, useMediaQuery, List, ListItem, ListItemText } from '@mui/material';import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import MenuIcon from '@mui/icons-material/Menu';
 import customTheme from './components/themes/customTheme';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import CharacterManager from './components/characters/CharacterManager';
