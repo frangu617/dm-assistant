@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Grid, Button, Checkbox, FormControlLabel, TextField, Card, CardContent, Tooltip } from '@mui/material';
 import AbilityScores from './AbilityScore';
-import Skills from './Skills';
-import DnDClasses from '../reference_guide/DnDClasses';
+// import Skills from './Skills';
+import RaceSelector from './RaceSelector';
+import AlignmentSelector from './AlignmentSelector';
+import ClassSelector from './ClassSelector';
+import BackgroundSelector from './BackgroundSelector';
+import Abilities from './AbilitySelector';
+import SkillsSelector from './SkillsSelector';
 
 
 export default function CharacterCreator() {
 
     const [characters, setCharacters] = useState([]);
+    const [resetKey, setResetKey] = useState(0);
     const [newCharacter, setNewCharacter] = useState({
         name: '',
         race: '',
@@ -31,10 +37,6 @@ export default function CharacterCreator() {
         description: '',
     });
     // Define arrays for races, classes, alignments, backgrounds, and skills
-    const races = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Gnome', 'Half-Elf', 'Half-Orc', 'Tiefling'];
-    const classes = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard'];
-    const alignments = ['Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'True Neutral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil'];
-    const backgrounds = ['Acolyte', 'Folk Hero', 'Noble', 'Sage', 'Soldier', 'Criminal', 'Entertainer', 'Hermit', 'Outlander'];
     const skillsList = ['Acrobatics', 'Animal Handling', 'Arcana', 'Athletics', 'Deception', 'History', 'Insight', 'Intimidation', 'Investigation', 'Medicine', 'Nature', 'Perception', 'Performance', 'Persuasion', 'Religion', 'Sleight of Hand', 'Stealth', 'Survival'];
 
 
@@ -62,6 +64,7 @@ export default function CharacterCreator() {
         description: '',
     });
 
+
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}/api/characters`)
             .then((response) => {
@@ -74,7 +77,6 @@ export default function CharacterCreator() {
             })
             .catch((error) => console.error('Error fetching characters:', error));
     }, []);
-
 
     const handleCharacterSubmit = (e) => {
         e.preventDefault();
@@ -98,20 +100,63 @@ export default function CharacterCreator() {
                 setNewCharacter(getInitialCharacterState());
             })
             .catch((error) => console.error('Error creating character:', error));
+
+
+        // Reset form state
+        setNewCharacter(getInitialCharacterState());
+
+        // Increment key to force-reset child components like SkillsSelector
+        setResetKey(prevKey => prevKey + 1);
+
+    };
+
+    const handleClassChange = (selectedClass) => {
+        setNewCharacter({ ...newCharacter, class: selectedClass }); // Update the selected class in the state
+    };
+
+    const handleRaceChange = (selectedRace) => {
+        setNewCharacter({ ...newCharacter, race: selectedRace });
+    };
+
+    const handleAlignmentChange = (selectedAlignment) => {
+        setNewCharacter({ ...newCharacter, alignment: selectedAlignment });
+    }
+
+    const handleBackgroundChange = (selectedBackground) => {
+        setNewCharacter({ ...newCharacter, background: selectedBackground });
+    }
+
+    const handleAbilityChange = (ability, value) => {
+        setNewCharacter({
+            ...newCharacter,
+            abilities: {
+                ...newCharacter.abilities,
+                [ability]: value,
+            },
+        });
+    };
+
+    const handleSkillsChange = (selectedSkills) => {
+        // Update the character's skills based on selection from SkillsSelector
+        setNewCharacter({
+            ...newCharacter,
+            skills: selectedSkills.map(skill => skill.name), // Assuming selectedSkills is an array of skill objects
+        });
     };
 
     return (
         <div>
             <h2>D&D Character Creator</h2>
-           
+
             {/* Character Creation Form */}
             <form onSubmit={handleCharacterSubmit}>
                 <Card style={{ marginBottom: '20px' }}>
                     <CardContent>
                         <h3>Character Details:</h3>
-
                         <Grid container spacing={2}>
 
+
+                            {/* Name */}
                             <Grid item xs={6} sm={4} lg={2} >
                                 <TextField
                                     fullWidth
@@ -121,84 +166,42 @@ export default function CharacterCreator() {
                                     onChange={(e) => setNewCharacter({ ...newCharacter, name: e.target.value })}
                                 />
                             </Grid>
+
+
                             {/* Race */}
-                            <Grid item xs={6} sm={4} lg={2} >
-                                <Tooltip title={<span><DnDClasses prop={newCharacter.class} /> </span>}>
-                                    <TextField
-                                        fullWidth
-                                        select
-                                        label="Race"
-                                        variant="outlined"
-                                        value={newCharacter.race}
-                                        onChange={(e) => setNewCharacter({ ...newCharacter, race: e.target.value })}
-                                        SelectProps={{ native: true }}
-                                    >
-                                        <option value=""> </option>
-                                        {races.map((race, index) => (
-                                            <option key={index} value={race}>{race}</option>
-                                        ))}
-                                    </TextField>
-                                </Tooltip>
+                            <Grid item xs={6} sm={4} lg={2}>
+                                <RaceSelector
+                                    selectedRace={newCharacter.race}
+                                    onRaceChange={handleRaceChange}
+                                />
                             </Grid>
+
+
                             {/* Class */}
                             <Grid item xs={6} sm={4} lg={2} >
-
-                                <TextField
-                                    fullWidth
-                                    select
-                                    label="Class"
-                                    variant="outlined"
-                                    value={newCharacter.class}
-                                    onChange={(e) => setNewCharacter({ ...newCharacter, class: e.target.value })}
-                                    SelectProps={{ native: true }}
-                                >
-                                    <option value=""></option>
-                                    {classes.map((charClass, index) => (
-                                        <option key={index} value={charClass}>
-                                            {charClass}
-                                        </option>
-                                    ))}
-                                </TextField>
+                                <ClassSelector
+                                    selectedClass={newCharacter.class}
+                                    onClassChange={handleClassChange}
+                                />
                             </Grid>
+
+
                             {/* Alignment */}
-                            <Grid item xs={6} sm={4} lg={2} >
 
-                                <TextField
-                                    fullWidth
-                                    select
-                                    label="Alignment"
-                                    variant="outlined"
-                                    SelectProps={{ native: true }}
-                                    value={newCharacter.alignment}
-                                    onChange={(e) => setNewCharacter({ ...newCharacter, alignment: e.target.value })}
-                                >
-                                    <option value=""></option>
-                                    {alignments.map((alignment, index) => (
-                                        <option key={index} value={alignment}>
-                                            {alignment}
-                                        </option>
-                                    ))}
-                                </TextField>
+                            <Grid item xs={6} sm={4} lg={2}>
+                                <AlignmentSelector
+                                    selectedAlignment={newCharacter.alignment}
+                                    onAlignmentChange={handleAlignmentChange}
+                                />
                             </Grid>
-                            {/* Background */}
-                            <Grid item xs={6} sm={4} lg={2} >
 
-                                <TextField
-                                    fullWidth
-                                    select
-                                    label="Background"
-                                    variant="outlined"
-                                    SelectProps={{ native: true }}
-                                    value={newCharacter.background}
-                                    onChange={(e) => setNewCharacter({ ...newCharacter, background: e.target.value })}
-                                >
-                                    <option value=""></option>
-                                    {backgrounds.map((bg, index) => (
-                                        <option key={index} value={bg}>
-                                            {bg}
-                                        </option>
-                                    ))}
-                                </TextField>
+
+                            {/* Background */}
+                            <Grid item xs={6} sm={4} lg={2}>
+                                <BackgroundSelector
+                                    selectedBackground={newCharacter.background}
+                                    onBackgroundChange={handleBackgroundChange}
+                                />
                             </Grid>
                         </Grid>
                     </CardContent>
@@ -207,34 +210,10 @@ export default function CharacterCreator() {
                 {/* Abilities (Strength, Dexterity, etc.) */}
                 <Card style={{ marginBottom: '20px' }}>
                     <CardContent>
-                        <Grid item xs={12}>
-                            <h3>Abilities</h3>
-                            <Grid container spacing={2}>
-                                {Object.keys(newCharacter.abilities).map((ability, index) => (
-                                    <Grid item xs={6} sm={4} md={2} key={index}>
-
-                                        <Tooltip title={<span><AbilityScores ability={ability} /></span>} placement="top">
-                                            <TextField
-                                                fullWidth
-                                                label={ability.charAt(0).toUpperCase() + ability.slice(1)} // Capitalize first letter
-                                                type="number"
-                                                variant="outlined"
-                                                value={newCharacter.abilities[ability]}
-                                                onChange={(e) =>
-                                                    setNewCharacter({
-                                                        ...newCharacter,
-                                                        abilities: {
-                                                            ...newCharacter.abilities,
-                                                            [ability]: parseInt(e.target.value),
-                                                        },
-                                                    })
-                                                }
-                                            />
-                                        </Tooltip>
-                                    </Grid>
-                                ))}
-                            </Grid>
-                        </Grid>
+                        <Abilities
+                            abilities={newCharacter.abilities}
+                            onAbilityChange={handleAbilityChange}
+                        />
                     </CardContent>
 
 
@@ -242,40 +221,7 @@ export default function CharacterCreator() {
                 {/* Skills */}
                 <Card style={{ marginBottom: '20px' }}>
                     <CardContent>
-                        <h3>Skills</h3>
-
-                        <CardContent sx={{ p: 0 }}>
-                            <Grid container spacing={2} justifyContent="center" alignContent={"center"}>
-                                {skillsList.map((skill, index) => (
-                                    <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-                                        <Tooltip title={<span><Skills skill={skill} /></span>} placement="top">
-                                            <FormControlLabel
-                                                control={
-
-                                                    <Checkbox
-                                                        checked={newCharacter.skills.includes(skill)}
-                                                        onChange={(e) => {
-                                                            const skills = [...newCharacter.skills];
-                                                            if (e.target.checked) {
-                                                                skills.push(skill);
-                                                            } else {
-                                                                const index = skills.indexOf(skill);
-                                                                if (index !== -1) {
-                                                                    skills.splice(index, 1);
-                                                                }
-                                                            }
-                                                            setNewCharacter({ ...newCharacter, skills });
-                                                        }}
-                                                    />
-
-                                                }
-                                                label={skill}
-                                            />
-                                        </Tooltip>
-                                    </Grid>
-                                ))}
-                            </Grid>
-                        </CardContent>
+                        <SkillsSelector key = {resetKey} onSkillsChange={handleSkillsChange} />
                     </CardContent>
                 </Card>
 

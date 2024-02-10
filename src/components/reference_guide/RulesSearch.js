@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CircularProgress, Typography, Box, Container, Paper, MenuItem, FormControl, InputLabel, Select } from '@mui/material';
 import DOMPurify from 'dompurify';
-import {marked} from 'marked';
+import { marked } from 'marked';
 
 function RulesSearch() {
     const [rules, setRules] = useState([]);
@@ -87,7 +87,7 @@ function RulesSearch() {
                     {error && <Typography color="error">{error}</Typography>}
                     {selectedRule && (
                         <>
-                            <Typography variant="h5" component="h2">{selectedRule.name}</Typography>
+
                             {renderRuleData(selectedRule)}
                         </>
                     )}

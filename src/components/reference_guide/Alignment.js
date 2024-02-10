@@ -69,7 +69,7 @@ export default function Alignment() {
                 </FormControl>
             )
         }
-        
+
     }
     return (
         <div>
