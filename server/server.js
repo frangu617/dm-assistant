@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const fetch = require('node-fetch'); // Make sure to install node-fetch if you haven't
+// const fetch = require('node-fetch'); // Make sure to install node-fetch if you haven't
 const axios = require('axios');
 require('dotenv').config();
 const app = express();
